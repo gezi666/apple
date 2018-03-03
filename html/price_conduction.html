@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+</head>
+<body class="price_conduction">
+<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item price_monitor">
+            <h2><i class="iconfont icon-monitor"></i><a href="price_monitor.html">价格监测</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_monitor_实时监测">实时监测</a></li>
+                <li><a href="#price_monitor_涨跌幅排名">涨跌幅排名</a></li>
+                <li><a href="#price_monitor_价格走势">价格走势</a></li>
+                <li><a href="#price_monitor_季节性规律">季节性规律</a></li>
+            </ul>
+        </dt>
+        <!--<dt class="navbar-item price_market" id="section-2">
+            <h2><i class="iconfont icon-liutong"></i><a href="price_market.html">市场流通</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_market_流向监测">流向监测</a></li>
+                <li><a href="#price_market_流向分析">流向分析</a></li>
+            </ul>
+        </dt>-->
+        <dt class="navbar-item price_conduction" id="section-3">
+            <h2><i class="iconfont icon-chuandao"></i><a href="price_conduction.html">传导机制</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_conduction_地区性">地区性</a></li>
+                <li><a href="#price_conduction_时滞性">时滞性</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_affect" id="section-4">
+            <h2><i class="iconfont icon-yingxiang"></i><a href="price_affect.html">影响因素</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_affect_各环节价格">各环节价格</a></li>
+                <li><a href="#price_affect_多因素影响">多因素影响</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_forecast" id="section-5">
+            <h2><i class="iconfont icon-yuce"></i><a href="price_forecast.html">预测预警</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_forecast_价格预警">价格预警</a></li>
+                <li><a href="#price_forecast_涨跌预警">涨跌预警</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+<div class="cont">
+    <div id="price_conduction_地区性" class="section related">
+        <div class="sec-top">
+            <h3 class="pub-title">地区性</h3>
+            <div class="special-else">
+                <ul class="time-tab">
+                    <li class="active" data-areaid='1'>主产区</li>
+                    <li data-areaid='2'>主销区</li>
+                </ul>
+            </div>
+            <div class="else">
+    			<div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct">
+                        <div class="diy-scroll">
+                            <p>基于向量自回归（VAR）模型对某销地和多产地苹果批发n天平均价格进行分析，通过脉冲响应函数分析和方差分解，得到产地对销地价格的贡献度以及价格传导的时滞性。</p>
+							<p class='help-title'>（1）计算思路：</p>
+							<p>通过对各个产地和销地进行单位根（平稳性）检验来确定苹果价格序列是否稳定，然后进行协整检验来确定这些价格序列间是否具有长期稳定关系，再通过格兰杰因果检验来每个产地的价格序列能多大程度地解释销地的价格序列，进而得到产地价格与销地价格之间的因果关系。再使用脉冲响应分析来得到产地苹果价格对某销地苹果价格的传递效用时滞性，用方差分解来确定产地价格对销地价格影响的程度，即所谓贡献度。</p>
+							<p class='help-title'>（2）图表解读：</p>
+							<p>贡献度：产地价格变化对于销地价格变化的影响程度，如山东>北京贡献度：43%，表示北京价格的变化43%是由山东价格的变化引起的。</p>
+							<p class='help-title'>（3）数据来源：</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="section-desc">
+            <span class="map-region">山东</span><span>苹果贡献度分析</span>
+        </div> -->
+        <div class="sec-ct">
+    		<div class="sec-part">
+                <div>
+                    <div id="space-related" class="echart-box h900"></div>
+                </div>
+           </div>
+       </div>
+    </div>
+    <div id="price_conduction_时滞性" class="section timelag">
+        <div class="sec-top">
+            <h3 class="pub-title">时滞性</h3>
+            <div class="else">
+                <!--<div class="special-else">
+	                <ul class="time-tab first-radio">
+	                    <li class="active">山东</li>
+	                    <li>陕西</li>
+	                </ul>
+	            </div>-->
+    			<div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct important">
+                        <div class="diy-scroll scorllbar-inner">
+                            <p>基于向量自回归（VAR）模型对某销地和多产地苹果批发n天平均价格进行分析，通过脉冲响应函数分析和方差分解，得到产地对销地价格的贡献度以及价格传导的时滞性。</p>
+							<p class='help-title'>（1）计算思路：</p>
+							<p>通过对各个产地和销地进行单位根（平稳性）检验来确定苹果价格序列是否稳定，然后进行协整检验来确定这些价格序列间是否具有长期稳定关系，再通过格兰杰因果检验来每个产地的价格序列能多大程度地解释销地的价格序列，进而得到产地价格与销地价格之间的因果关系。再使用脉冲响应分析来得到产地苹果价格对某销地苹果价格的传递效用时滞性，用方差分解来确定产地价格对销地价格影响的程度，即所谓贡献度。</p>
+							<p class='help-title'>（2）图表解读：</p>
+							<p>价格传导滞后时间：产地价格的变动传导到销地所需要的时间。</p>
+							<p class='help-title'>（3）数据来源：</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectop-two">
+            <div class="sel-areas">
+                <span class="which-area">产区： </span>
+                <div class="fake-ul">
+                    <input  data-areaid='hfeao' disabled class="sel-area" type="text" value="北京">
+                    <i class="iconfont icon-xiala"></i>
+                    <ul>
+                        <li>陕西</li>
+                        <li data-areaid='554555'>山东</li>
+                        <li>黑龙江</li>
+                        <li>辽宁</li>
+                        <li>河北</li>
+                    </ul>
+                </div>
+            </div>
+        </div>      
+        <div class="sec-ct">
+            <div>
+        		<div class="sec-part">
+                    <div id="time-lag" class="echart-box"></div>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+</div>
+
+
+<!-- 整体的背景图片样式 -->
+<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script src="../Lib/Echarts/china.js"></script>
+<script src="../Lib/time-scrollbar.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/price_conduction.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../Lib/pagination/page.css" />
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+    <script src="../Lib/pagination/jquery.myPagination.js"></script>
+</head>
+
+<body class="produce_advantage">
+    <div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+    <div class="wrapper">
+        <div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item production_status">
+            <h2><i class="iconfont icon-fenxi"></i><a href="apple_product.html">生产现状</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#production_status_空间分布">空间分布</a></li>
+                <li><a href="#production_status_历史演变">历史演变</a></li>
+                <!--<li><a href="#production_status_生产占比">生产占比</a></li>
+                <li><a href="#production_status_品种结构">品种结构</a></li>
+                <li><a href="#production_status_树龄结构">树龄结构</a></li>
+                <li><a href="#production_status_25年以上老龄苹果园分布">25年以上老龄苹果园分布</a></li>
+                <li><a href="#production_status_果农年龄结构">果农年龄结构</a></li>
+                <li><a href="#production_status_果农老龄化预测">果农老龄化预测</a></li>-->
+            </ul>
+        </dt>
+        <dt class="navbar-item produce_advantage" id="section-2">
+            <h2><i class="iconfont icon-chanqu"></i><a href="produce_advantage.html">产区优势</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#produce_advantage_规模优势">规模优势</a></li>
+                <li><a href="#produce_advantage_效率优势">效率优势</a></li>
+                <li><a href="#produce_advantage_效益优势">效益优势</a></li>
+                <!--<li><a href="#produce_advantage_产区优势历史演变">产区优势历史演变</a></li>-->
+            </ul>
+        </dt>
+        <dt class="navbar-item crop_weather" id="section-3">
+            <h2><i class="iconfont icon-qixiang"></i><a href="crop_weather.html">作物气象</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#crop_weather_影响因素">影响因素</a></li>
+                <li><a href="#crop_weather_灾害临界值">灾害临界值</a></li>
+                <li><a href="#crop_weather_灾害监测">灾害监测</a></li>
+                <li><a href="#crop_weather_单产预测">单产预测</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item globe_apple" id="section-4">
+            <h2><i class="iconfont icon-quanqiu"></i><a href="globe_apple.html">全球生产</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#globe_apple_空间分布">空间分布</a></li>
+                <li><a href="#globe_apple_历史演变">历史演变</a></li>
+                <li><a href="#globe_apple_生产占比">生产占比</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+        <div class="cont">
+            <div id="produce_advantage_规模优势" class="section scale-advantage">
+                <div class="sec-top">
+                    <h3 class="pub-title">规模优势</h3>
+                    <div class="else">
+                        <div class="pop-time">
+                            <div class="time-des">时间：</div>
+                            <div class="time-txt">2013-2017</div>
+                            <ul class="time-list">
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>1995-1999</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2000-2004</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2005-2009</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2010-2014</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2015-2017</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pub-icon scale-advnatage-tab-nav">
+                            <button class="icon-btn active"><i class="iconfont icon-fangkuai"></i></button>
+                            <button class="icon-btn"><i class="iconfont icon-caidan"></i></button>
+                        </div>
+                        <div class="help">
+                            <button><i class="iconfont icon-wenhao"></i></button>
+                            <div class="help-ct">
+		                        <div class="diy-scroll">
+		                            <p>规模优势指数反映一个地区某种作物的规模化程度。</p>
+		                            <p class='help-title'> （1）计算公式</p>
+		                            <p><code> SAIij = ( GSij /GSi) /( GSj /GS)</code></p>
+		                            <p class='help-title'>（2）式中</p>
+		                            <p>SAIij 为规模优势指数; GSij 为 i 区 j 种农产品的播种面积; GSi 为 i 区所有农产品的播种面积之和; GSj 为全国 j 种农产品的播种面积; GS 为全国所有农产品的播种面积之和。 </p>
+		                            <p>SAIij ＜ 1，说明与全国平均水平相比， i 区 j 种作物在生产规模上处于劣势; SAIij ＞ 1，说明与全国平均水平相比，i 区 j 种作物在生产规模上处于优势; SAIij值越大， 说明作物的规模比较优势越明显。</p>
+		                            <p class='help-title'>（3）数据来源</p>
+		                            <p>农业部</p>
+		                        </div>
+                            </div>
+                        </div>
+                        <button class="download"><i class="iconfont icon-xiazai"></i></button>
+                    </div>
+                </div>
+                <div class="sec-ct scale-advantage-tab-ct">
+                    <div>
+                        <div class="sec-part">
+                            <div id="scale-advantage" class="echart-box"></div>
+                            <div>
+                               <!-- <div class="section-desc">
+                                    <h3 class="strong-blue">山东、陕西、甘肃、河北、陕西</h3>
+                                    <span>具有明显的效率优势。</span>
+                                </div>
+                                <div class="zone-advantage"><span>陕西</span>的效率优势指数为<span class="strong-red">2.1</span>位列五省之首。</div>-->
+                                <div class="rank charts-tab mrt20">
+                                    <ul class="tab-nav">
+                                        <li class="active">排名</li>
+                                    </ul>
+                                    <div class="tab-ct">
+                                        <div id="rank" style="height: 300px;" class="echart-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="scale-advantage-time" class="time-control" style="z-index: 99;"></div>
+                        <div class="desc-edit">
+                            <div class="top">
+                                <span class="desc-word">描述</span>
+                                <button class="fr edit-btn">
+                                    <i class="iconfont icon-bianji"></i>
+                                    <span>编辑</span>
+                                </button>
+                            </div>
+                            <div class="desc-ct">
+                                <textarea class="edit-ct scrollbar-inner" disabled="">2011-2014年，全球苹果产量年平均变化率4%，2014年产量8200万吨。中国苹果产量，年平均变化率3.5%，2014年产量4090万吨。美国苹果产量年平均变化率4%，2014年产量519万吨。</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="produce_advantage_效率优势" class="section efficiency-advantage" style="height:600px;">
+                <div class="sec-top">
+                    <h3 class="pub-title">效率优势</h3>
+                    <div class="else">
+                        <div class="pop-time">
+                            <div class="time-des">时间： </div>
+                            <div class="time-txt">2013-2017</div>
+                            <ul class="time-list">
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>1995-1999</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2000-2004</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2005-2009</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2010-2014</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2015-2017</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pub-icon efficiency-advnatage-tab-nav">
+                            <button class="icon-btn active"><i class="iconfont icon-fangkuai"></i></button>
+                            <button class="icon-btn"><i class="iconfont icon-caidan"></i></button>
+                        </div>
+                        <div class="help">
+                            <button><i class="iconfont icon-wenhao"></i></button>
+                            <div class="help-ct">
+		                        <div class="diy-scroll">
+		                            <p>效率优势指数反映了一个地区某种作物的生产效率。</p>
+		                            <p class='help-title'> （1）计算公式</p>
+		                            <p><code>EAIij = APij /APj</code></p>
+		                            <p class='help-title'>（2）式中</p>
+		                            <p>EAIij为i 区j 种作物的效率优势指数; APij为i 区j 种作物单产; APj为全国j 种作物平均单产。</p>
+		                            <p>EAIij ＜ 1，说明i 区j 种作物生产与全国相比生产效率处于劣势; EAIij ＞ 1，说明i 区j 种作物生产与全国相比生产效率处于优势; EAIij值越大，说明生产效率优势越强。</p>
+		                            <p class='help-title'>（3）数据来源</p>
+		                            <p>农业部</p>
+		                        </div> 
+                            </div>
+                        </div>
+                        <button class="download"><i class="iconfont icon-xiazai"></i></button>
+                    </div>
+                </div>
+                <div class="sec-ct efficiency-advantage-tab-ct">
+                    <div>
+                        <div class="sec-part">
+                            <div id="efficiency-advantage" class="echart-box"></div>
+                            <div>
+                                <div class="section-desc">
+                                    <h3 class="strong-blue">山东、陕西、甘肃、河北、陕西</h3>
+                                    <span>具有明显的效率优势。</span>
+                                </div>
+                                <div class="zone-advantage"><span>陕西</span>的效率优势指数为<span class="strong-red">2.1</span>位列五省之首。</div>
+                                <div class="rank charts-tab">
+                                    <ul class="tab-nav">
+                                        <li class="active">排名</li>
+                                    </ul>
+                                    <div class="tab-ct">
+                                        <div id="efficiency-rank" style="height: 220px;" class="echart-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="efficiency-advantage-time" class="time-control" style="z-index: 99;"></div>
+                        <div class="desc-edit">
+                            <div class="top">
+                                <span class="desc-word">描述</span>
+                                <button class="fr edit-btn">
+                                    <i class="iconfont icon-bianji"></i>
+                                    <span>编辑</span>
+                                </button>
+                            </div>
+                            <div class="desc-ct">
+                                <textarea class="edit-ct scrollbar-inner" disabled="">2011-2014年，全球苹果产量年平均变化率4%，2014年产量8200万吨。中国苹果产量，年平均变化率3.5%，2014年产量4090万吨。美国苹果产量年平均变化率4%，2014年产量519万吨。</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="produce_advantage_效益优势" class="section benefit-advantage">
+                <div class="sec-top">
+                    <h3 class="pub-title">效益优势</h3>
+                    <div class="else">
+                        <div class="pop-time">
+                            <div class="time-des">时间： </div>
+                            <div class="time-txt">2013-2017</div>
+                            <ul class="time-list">
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>1995-1999</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2000-2004</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2005-2009</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2010-2014</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2015-2017</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pub-icon benefit-advnatage-tab-nav">
+                            <button class="icon-btn active"><i class="iconfont icon-fangkuai"></i></button>
+                            <button class="icon-btn"><i class="iconfont icon-caidan"></i></button>
+                        </div>
+                        <div class="help">
+                            <button><i class="iconfont icon-wenhao"></i></button>
+                            <div class="help-ct">                                
+		                        <div class="diy-scroll">
+		                            <p>效益优势指数反映一个地区某种作物的经济效益状况。</p>
+		                            <p class='help-title'> （1）计算公式</p>
+		                             <p><code>BAIij = NOij /NOj</code></p>
+		                             <p class='help-title'>（2）式中</p>
+		                            <p>BAIij为 i 区 j 种作物的效益优势指数; NOij 为 i 区 j 种作物的净产值; NOj 为全国 j 种作物的平均净产值。</p>
+		                            <p>BAIij ＜ 1，说明 i 区 j 种作物和全国平均水平相比在经济效益方面处于劣势; BAIij ＞ 1，说明 i 区 j 种作物和全国平均水平相比在经济效益方面处于优势; BAIij 大， 则效益优势越明显。</p>
+									<p class='help-title'>（3）数据来源</p>
+		                            <p>农业部</p>                            
+		                        </div>                                 
+                            </div>
+                        </div>
+                        <button class="download"><i class="iconfont icon-xiazai"></i></button>
+                    </div>
+                </div>
+                <div class="sec-ct benefit-advantage-tab-ct">
+                    <div>
+                        <div class="sec-part">
+                            <div id="benefit-advantage" class="echart-box"></div>
+                            <div>
+                                <div class="section-desc">
+                                    <h3 class="strong-blue">山东、陕西、甘肃、河北、陕西</h3>
+                                    <span>具有明显的效率优势。</span>
+                                </div>
+                                <div class="zone-advantage"><span>陕西</span>的效率优势指数为<span class="strong-red">2.1</span>位列五省之首。</div>
+                                <div class="rank charts-tab">
+                                    <ul class="tab-nav">
+                                        <li class="active">排名</li>
+                                    </ul>
+                                    <div class="tab-ct">
+                                        <div id="benefit-rank" style="height: 220px;" class="echart-box"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="benefit-advantage-time" class="time-control" style="z-index: 99;"></div>
+                        <div class="desc-edit">
+                            <div class="top">
+                                <span class="desc-word">描述</span>
+                                <button class="fr edit-btn">
+                                    <i class="iconfont icon-bianji"></i>
+                                    <span>编辑</span>
+                                </button>
+                            </div>
+                            <div class="desc-ct">
+                                <textarea class="edit-ct scrollbar-inner" disabled="">2011-2014年，全球苹果产量年平均变化率4%，2014年产量8200万吨。中国苹果产量，年平均变化率3.5%，2014年产量4090万吨。美国苹果产量年平均变化率4%，2014年产量519万吨。</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div id="produce_advantage_产区优势历史演变" class="section history-advantage">
+                <div class="sec-top">
+                    <h3 class="pub-title">产区优势历史演变</h3>
+                    <div class="else">
+                        <div class="pop-time">
+                            <div class="time-des">时间： </div>
+                            <div class="time-txt">2013-2017</div>
+                            <ul class="time-list">
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>1995-1999</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2000-2004</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2005-2009</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2010-2014</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="radio" name="global-apple-history-radio">
+                                        <i class="radio iconfont"></i>
+                                        <span>2015-2017</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pub-icon history-advnatage-tab-nav">
+                            <button class="icon-btn active"><i class="iconfont icon-shanfeng"></i></button>
+                            <button class="icon-btn"><i class="iconfont icon-tongji"></i></button>
+                            <button class="icon-btn"><i class="iconfont icon-caidan"></i></button>
+                        </div>
+                        <div class="pub-check">
+                            <dl class="fixlocation">
+                                <dt>地区：</dt>
+                                <dd class="locations">
+                                    <span>全国</span>
+                                    <span>北京市</span>
+                                    <span>天津市</span>
+                                </dd>
+                            </dl>
+                            <div class="another-location">
+                                <span class="for-pop">多选</span>
+                                <div class="pop-areas">
+                                    <ul class="areas scrollbar-inner">
+                                        <li class="area-item">
+                                            <label>
+                                                <input type="checkbox">
+                                                <i class="checkbox iconfont"></i>
+                                                <span>areas1</span>
+                                            </label>
+                                        </li>
+                                        <li class="area-item">
+                                            <label>
+                                                <input type="checkbox">
+                                                <i class="checkbox iconfont"></i>
+                                                <span>areas2</span>
+                                            </label>
+                                        </li>
+                                        <li class="area-item">
+                                            <label>
+                                                <input type="checkbox">
+                                                <i class="checkbox iconfont"></i>
+                                                <span>areas3</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="yesorno-btn">
+                                        <button class="yes" style="margin-right: 30px;">确认</button>
+                                        <button class="no">清除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="pub-radio">
+                            <li class="active">规模优势</li>
+                            <li>效率优势</li>
+                            <li>效益优势</li>
+                        </ul>
+                        <button class="download"><i class="iconfont icon-xiazai"></i></button>
+                    </div>
+                </div>
+                <div class="sec-ct history-advantage-tab-ct">
+                    <div>
+                        <div class="sec-part">
+                            <div id="history-curve" class="echart-box"></div>
+                        </div>
+                        <div class="desc-edit">
+                            <div class="top">
+                                <span class="desc-word">描述</span>
+                                <button class="fr edit-btn">
+                                    <i class="iconfont icon-bianji"></i>
+                                    <span>编辑</span>
+                                </button>
+                            </div>
+                            <div class="desc-ct">
+                                <textarea class="edit-ct scrollbar-inner" disabled="">2011-2014年，全球苹果产量年平均变化率4%，2014年产量8200万吨。中国苹果产量，年平均变化率3.5%，2014年产量4090万吨。美国苹果产量年平均变化率4%，2014年产量519万吨。</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="din">
+                        <div id="history-pillar" class="echart-box"></div>
+                    </div>
+                    <div class="din pro_Ad_table">
+                        <table class="sheet">
+                        </table>
+
+                        <script id="his_hand_table" type="text/x-handlebars-template">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    {{#each arr}}
+                                        {{#if flag}}
+                                            {{#each value}}
+                                                <th>{{time}}</th>
+                                                {{/each}}
+                                        {{/if}}
+                                    {{/each}}
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title}}</td>
+                                <td>{{name}}</td>
+                                    {{#each value}}
+                                        <td><input disabled="" type="text" value="{{area}}" /></td>
+                                    {{/each}}
+                                    <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title1}}</td>
+                                <td>{{name}}</td>
+                                {{#each value}}
+                                    <td><input disabled="" type="text" value="{{totalArea}}" /></td>
+                                {{/each}}
+                                <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        </script>
+
+
+
+                        <script id="his_hand_table1" type="text/x-handlebars-template">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    {{#each arr}}
+                                        {{#if flag}}
+                                            {{#each value}}
+                                                <th>{{time}}</th>
+                                                {{/each}}
+                                        {{/if}}
+                                    {{/each}}
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title}}</td>
+                                <td>{{name}}</td>
+                                    {{#each value}}
+                                        <td><input disabled="" type="text" value="{{area}}" /></td>
+                                    {{/each}}
+                                    <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title1}}</td>
+                                <td>{{name}}</td>
+                                {{#each value}}
+                                    <td><input disabled="" type="text" value="{{yield}}" /></td>
+                                {{/each}}
+                                <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        </script>
+
+
+                        <script id="his_hand_table2" type="text/x-handlebars-template">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    {{#each arr}}
+                                        {{#if flag}}
+                                            {{#each value}}
+                                                <th>{{time}}</th>
+                                                {{/each}}
+                                        {{/if}}
+                                    {{/each}}
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title}}</td>
+                                <td>{{name}}</td>
+                                    {{#each value}}
+                                        <td><input disabled="" type="text" value="{{netOutputVaule}}" /></td>
+                                    {{/each}}
+                                    <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+
+
+                        </tbody>
+                        </script>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    
+    <!-- 整体的背景图片样式 -->
+    <!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+    <script src="../Lib/Echarts/echarts.common.min.js"></script>
+    <script src="../Lib/d3/d3.v4.min.js"></script>
+    <script src="../js/chart-map-library.min.js"></script>
+    <script src="../Lib/Echarts/echarts-engine.js"></script>
+    <script src="../js/public.js"></script>
+    <script src="../js/produce_advantage.js"></script>
+    <script src="../Lib/handlebars-v4.0.5.js"></script>
+    <script src="../js/unite.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            //地区选择
+            ajaxGetDataCall("resources/produceHistorical/region", '', areasCb);
+
+            function areasCb(data) {
+                var data = data.data;
+                var str = '';
+                for (var i = 0; i < data.length; i++) {
+                    str += '<li class="area-item">' +
+                        '<label>' +
+                        '<input type="checkbox">' +
+                        '<i class="checkbox iconfont"></i>' +
+                        '<span>' + data[i] + '</span>' +
+                        '</label>' +
+                        '</li>';
+                }
+                $("ul.areas").html(str);
+            }
+
+
+            //初始化默认数据渲染表格
+
+             function interface(interface){
+                var url = '';
+                switch (interface) {
+                    //规模优势
+                    case 'scaleList':
+                       url = 'resources/produceHistorical/scaleList';
+                       break
+
+                    //效率优势
+                    case 'efficientList':
+                       url = 'resources/produceHistorical/efficientList';
+                       break;
+
+                    //效益优势
+                    case 'benefitList':
+                       url = 'resources/produceHistorical/benefitList';
+                       break;
+
+                    default:
+                }
+
+                return url;
+            }
+
+
+
+            var pro_AdObj = {
+                year: 10,
+                //效率优势列表url
+                url: interface('scaleList'),
+                areas: '全国,北京市,天津市',
+                dom: ".pro_Ad_table",
+                handbarsDom: "#his_hand_table"
+            }
+
+            getTableData(pro_AdObj);
+
+
+            function getTableData(pro_AdObj) {
+             ajaxGetDataCall("resources/spatialDistribution/years", 'LIMIT=' + pro_AdObj.year, function(data) {
+
+                    window.cbTimeData = data.data.reverse().join(",");
+                    //渲染表格数据
+                    ajaxGetDataCall(pro_AdObj.url, "AREA_ID=" + pro_AdObj.areas + "&TIME_ID=" + cbTimeData, function(data) {
+                        callBackFn(data, pro_AdObj)
+                    });
+
+                });
+            }
+
+            // table 数据渲染
+            function callBackFn(data, myObj) {
+                // console.log(JSON.stringify(data.data))
+                //console.log("接受到的数据是: "+JSON.stringify(myObj.url))
+                $(myObj.dom + " table").html("");
+                var obj = {};
+                obj.arr = [];
+
+                 //判断表格第一列显示的名称
+                var title = '';
+                var title1 = '';
+
+                //判断显示的那个tab标签
+
+                var whichTab = "";
+                var handbarsDom = "";
+
+                if(myObj.url.indexOf('scaleList') > 0){
+                    whichTab = "scaleList";
+                }
+
+                else if(myObj.url.indexOf('efficientList') >0){
+                    whichTab = "efficientList";
+                }
+
+                else if(myObj.url.indexOf('benefitList') > 0){
+                    whichTab = "benefitList";
+                }
+
+                //console.log("选择的是哪个标签：" + whichTab)
+                switch (whichTab) {
+                    case 'scaleList':
+                        title = '苹果园面积';
+                        title1 = '农作物总播种面积';
+                        handbarsDom = "#his_hand_table";
+                        break;
+                    case 'efficientList':
+                        title = '苹果园面积';
+                        title1 = '苹果产量';
+                        handbarsDom = "#his_hand_table1";
+                        break;
+                     case 'benefitList':
+                        title = '亩净产值';
+                        title1 = '';
+                        handbarsDom = "#his_hand_table2";
+                        break;
+
+                    default:
+                }
+
+                for (key in data.data) {
+                    obj.arr.push({
+                        title: title,
+                        title1: title1,
+                        interface:whichTab,
+                        name: key,
+                        value: data.data[key]
+                    });
+                }
+                //在HTML循环里循环时间只判断是不是第一条数据
+                obj.arr[0].flag = true;
+
+                // console.log(JSON.stringify(obj))
+                 //console.log("渲染哪个handbar: " + handbarsDom )
+                var theTemplate = Handlebars.compile($(handbarsDom).html());
+                $(myObj.dom + " table").append(theTemplate(obj));
+            }
+
+
+
+            //根据选择地区渲染表格
+            $(".history-advantage .yes").on("click",function(){
+                var areas = [],
+                whichTab = '';
+                var whichInterface = '';
+                var target = $(this).parents(".pop-areas").find(".area-item");
+                target.each(function() {
+                    var flag = $(this).find("input").is(":checked");
+                    if (flag) {
+                        areas.push($(this).find("span").text());
+                    }
+                });
+                var forAjaxAreas = areas.join(",");
+                 //点击地区选择还要看右侧TAB选的是哪个
+                 $(".history-advantage .pub-radio li").each(function() {
+                    var flag = $(this).is(".active");
+                    if (flag) {
+                        whichTab = $(this).text();
+                    }
+                });
+                switch (whichTab) {
+                     case '规模优势':
+                        whichInterface = 'scaleList';
+                        break;
+                    case '效率优势':
+                        whichInterface = 'efficientList';
+                        break;
+                    case '效益优势':
+                        whichInterface = 'benefitList';
+                        break;
+                    default:
+                }
+
+                var pro_AdObj = {
+                    year: 10,
+                    url: interface(whichInterface),
+                    areas: forAjaxAreas,
+                    dom: ".pro_Ad_table",
+                    handbarsDom: "#his_hand_table",
+                }
+                //console.log('点击选择地区后: '+JSON.stringify(pro_AdObj))
+                getTableData(pro_AdObj)
+
+            })
+
+
+            //点击3个 TAB签 切换表格渲染
+             $(".history-advantage .pub-radio li").on('click', function() {
+            // 获取 种植面积 产量等 选中状态
+                var text = $(this).text();
+                var whichInterface = "";
+                switch (text) {
+                    case '规模优势':
+                        whichInterface = 'scaleList';
+                        break;
+                    case '效率优势':
+                        whichInterface = 'efficientList';
+                        break;
+                    case '效益优势':
+                        whichInterface = 'benefitList';
+                        break;
+                    default:
+                }
+
+            // 获取 已勾选的地区
+            var areas = [];
+            $(".history-advantage .locations").find("span").each(function(i, item) {
+                areas.push($(item).text());
+            });
+
+            // 动态参数 拼接完成
+            var pro_AdObj = {
+                year: 10,
+                url: interface(whichInterface),
+                areas: areas.join(','),
+                dom: ".pro_Ad_table",
+                handbarsDom: "#his_hand_table",
+            }
+           // console.log("选择的是："+JSON.stringify(pro_AdObj))
+            getTableData(pro_AdObj);
+        });
+
+
+            //表格修改部分
+
+            $(".sheet").on("click", ".sheet-modify", function(e) {
+
+                if ($(this).text() === '修改') {
+                    $(this).text('保存');
+
+                } else {
+                    var areaId = $(this).parent('tr').find('td').eq(1).text();
+                    var productId = '';
+                    var newDanwei = '';
+                    var changeDataArr = [];
+                    var timeId = [];
+                    var _this = this;
+                    var interface = "";
+
+
+                    var dcTxt = $(_this).parent('tr').children('td').eq(0).text();
+                    switch(dcTxt)
+                    {
+                        case "苹果园面积":
+                          newDanwei = "121689";
+                          interface = "spatialDistribution";
+                          break;
+                        case "农作物总播种面积":
+                          newDanwei = "112983";
+                          interface = "spatialDistribution";
+                          break;
+                        case "苹果产量":
+                          newDanwei = "112716";
+                          interface = "spatialDistribution";
+                          break;
+                        case "亩净产值":
+                          newDanwei = "1306&ITEM_ID=101045";
+                          interface = "produceAdvantage";
+                          break;
+
+                        default:
+
+                    }
+
+
+
+
+
+                    $(this).parent('tr').find('td').each(function(i, v) {
+                        if ($(v).find('input').val()) {
+                            changeDataArr.push($(v).find('input').val());
+                        }
+                        //changeDataArr.push($(v).find('input').val())
+
+                    });
+
+                    $(this).parents('.sheet').find('thead').children('tr').find('th').each(function(i, v) {
+                        if ($(v).text() !== "" && $(v).text() !== "操作") {
+                            timeId.push($(v).text());
+                        }
+                    });
+
+                    ajaxGetDataCall("resources/"+interface+"/updateSumData", "AREA_ID=" + areaId + "&TIME_ID=" + timeId.join(',') + "&PRODUCT_ID=" + newDanwei + "&SUM_DATA=" + changeDataArr.join(','), function(data) {
+                       // console.log(JSON.stringify(data));
+
+                    });
+                    $(this).text('修改');
+                    $(this).parent('tr').children('td').each(function(i, v) {
+                        $(v).children('input').attr("disabled", true).css("color", "#82bcff");
+                    });
+
+                }
+
+            });
+
+        })
+    </script>
+</body>
+
+</html>

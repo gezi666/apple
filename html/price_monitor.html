@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+    <style>
+    .echart-desc .zhang,
+    .echart-desc .die {
+        position: relative;
+    }
+
+    .echart-desc .zhang > div,
+    .echart-desc .die > div {
+        position: absolute!important;
+        left: 50%;
+        top: 0;
+        font-size: 20px;
+    }
+    .echart-desc .zhang > div i,
+    .echart-desc .die > div i {
+        margin-right: 5px;
+    }
+
+    .echart-desc .zhang > div {
+        color: #fb7110!important
+    }
+
+    .echart-desc .die > div {
+        color: #35d332!important
+    }</style>
+</head>
+<body class="price_monitor">
+<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item price_monitor">
+            <h2><i class="iconfont icon-monitor"></i><a href="price_monitor.html">价格监测</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_monitor_实时监测">实时监测</a></li>
+                <li><a href="#price_monitor_涨跌幅排名">涨跌幅排名</a></li>
+                <li><a href="#price_monitor_价格走势">价格走势</a></li>
+                <li><a href="#price_monitor_季节性规律">季节性规律</a></li>
+            </ul>
+        </dt>
+        <!--<dt class="navbar-item price_market" id="section-2">
+            <h2><i class="iconfont icon-liutong"></i><a href="price_market.html">市场流通</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_market_流向监测">流向监测</a></li>
+                <li><a href="#price_market_流向分析">流向分析</a></li>
+            </ul>
+        </dt>-->
+        <dt class="navbar-item price_conduction" id="section-3">
+            <h2><i class="iconfont icon-chuandao"></i><a href="price_conduction.html">传导机制</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_conduction_地区性">地区性</a></li>
+                <li><a href="#price_conduction_时滞性">时滞性</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_affect" id="section-4">
+            <h2><i class="iconfont icon-yingxiang"></i><a href="price_affect.html">影响因素</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_affect_各环节价格">各环节价格</a></li>
+                <li><a href="#price_affect_多因素影响">多因素影响</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_forecast" id="section-5">
+            <h2><i class="iconfont icon-yuce"></i><a href="price_forecast.html">预测预警</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_forecast_价格预警">价格预警</a></li>
+                <li><a href="#price_forecast_涨跌预警">涨跌预警</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+<div class="cont">
+    <div id="price_monitor_实时监测" class="section monitor" style="margin-bottom: 20px;">
+        <div class="sec-top">
+            <h3 class="pub-title">实时监测</h3>
+            <div class="special-else">
+                <ul class="time-tab">
+                    <li>日度</li>
+                    <li class="active">周度</li>
+                    <li>月度</li>
+                    <li>年度</li>
+                </ul>
+            </div>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct important">
+                        <div class="diy-scroll">
+							<p>图表展示全国各省日度/周度/月度/年度苹果批发价格环比涨跌幅排名。</p>
+                            <!--<p class='help-title'>（1）图表解读 </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p class='help-title'>（2）计算思路</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p>-->
+							<p class='help-title'>（1）数据来源</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectop-twoline" style="margin-bottom: 0;">
+            <span>2017-05-08</span>至<span>2017-05-14</span>
+            <div>
+                <span>地区： </span>
+                <span class="map-area">全国</span>
+            </div>
+        </div>
+        <div class="sec-ct tab-ct" style="margin-top: 0; padding: 0 20px;">
+            <div>
+                <div class="sec-part" style="position: relative;">
+                    <div class="section-desc special-center">
+                        <span>全国苹果批发价格实时监测</span>
+                    </div>
+                    <div id="map" class="echart-box important special-height"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="radius-border" style="margin-top: 20px;"></div>
+    <div id="price_monitor_涨跌幅排名" class="section rank">
+        <div class="sec-top">
+            <h3 class="pub-title">涨跌幅排名</h3>
+            <div class="special-else">
+                <ul class="time-tab">
+                    <li>日度</li>
+                    <li class="active">周度</li>
+                    <li>月度</li>
+                    <li>年度</li>
+                </ul>
+            </div>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct important">
+                        <div class="diy-scroll">
+							<p>图表展示全国各省日度/周度/月度/年度苹果批发价格环比涨跌幅排名。</p>
+                            <!--<p class='help-title'>（1）图表解读 </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p class='help-title'>（2）计算思路</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p>-->
+							<p class='help-title'>（1）数据来源</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectop-two">
+            <div>
+                <span>2017-05-08</span>至<span>2017-05-14</span>
+            </div>
+        </div>
+        <div class="sec-ct tab-ct">
+            <div>
+                <div class="sec-part">
+                    <div class="w48">
+                        <div class="echart-desc">
+                          <div class="zhang">
+                              <div><i class="iconfont icon-kanzhang"></i>涨</div>
+                          </div>
+                        </div>
+                        <div id="rank1" class="echart-box"></div>
+                    </div>
+                    <div class="w48">
+                        <div class="echart-desc">
+                          <div class="die">
+                              <div><i class="iconfont icon-zhang"></i>跌</div>
+                          </div>
+                        </div>
+                        <div id="rank2" class="echart-box"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="radius-border"></div>
+    <div id="price_monitor_价格走势" class="section trend">
+        <div class="sec-top">
+            <h3 class="pub-title">价格走势</h3>
+            <div class="special-else">
+                <ul class="time-tab">
+                    <li>日度</li>
+                    <li class="active">周度</li>
+                    <li>月度</li>
+                    <li>年度</li>
+                </ul>
+            </div>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct important">
+                        <div class="diy-scroll">
+							<p>图表展示全国或各省日度/周度/月度/年度苹果平均价格走势。</p>
+                            <!--<p class='help-title'>（1）图表解读 </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p class='help-title'>（2）计算思路</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p> -->
+							<p class='help-title'>（1）数据来源</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectop-two">
+            <div class="pub-check">
+                <dl class="fixlocation">
+                    <dt class="hidden">地区：</dt>
+                    <dd class="locations hidden">
+                        <span>全国</span>
+                        <span>山东</span>
+                    </dd>
+                </dl>
+                <div class="another-location">
+                    <span class="for-pop">分省</span>
+                    <div class="pop-areas l0">
+                        <ul class="areas scrollbar-inner">
+                            <li class="area-item">
+                                <label>
+                                    <input type="checkbox">
+                                    <i class="checkbox iconfont"></i>
+                                    <span>陕西</span>
+                                </label>
+                            </li>
+                            <li class="area-item">
+                                <label>
+                                    <input type="checkbox">
+                                    <i class="checkbox iconfont"></i>
+                                    <span>山东</span>
+                                </label>
+                            </li>
+                            <li class="area-item">
+                                <label>
+                                    <input type="checkbox">
+                                    <i class="checkbox iconfont"></i>
+                                    <span>甘肃</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="yesorno-btn">
+                            <button class="yes" style="margin-right: 30px;">确认</button>
+                            <button class="no">清除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct tab-ct">
+            <div>
+                <div class="sec-part">
+                    <div id="trend" class="echart-box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="radius-border"></div>
+    <div id="price_monitor_季节性规律" class="section law">
+        <div class="sec-top">
+            <h3 class="pub-title">季节性规律</h3>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct important">
+                        <!--<div class="diy-scroll">
+                            <p>农产品的价格会显著地受到季节影响，通过综合20年的月均价格，可以计算得到不同月份对价格的贡献。</p>
+                            <p>图表解读： </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p>计算思路：</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p>
+                        </div>-->
+                        <div class="diy-scroll">
+							<p>农产品的价格会显著地受到季节影响，通过综合20年的月均价格，可以计算得到不同月份对价格的贡献。</p>
+                            <p class='help-title'>（1）图表解读 </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p class='help-title'>（2）计算思路</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p>
+							<p class='help-title'>（3）数据来源</p>
+							<p>农业部</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct tab-ct">
+            <div>
+                <div class="sec-part">
+               <!--      <div class="echart-desc">
+                        <div class="forth"><span>第四季度</span></div>
+                        <div class="first"><span>第一季度</span></div>
+                        <div class="second"><span>第二季度</span></div>
+                        <div class="third"><span>第三季度</span></div>
+                    </div> -->
+                    <div id="law" class="echart-box important"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<!-- 整体的背景图片样式 -->
+<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script type="text/javascript" src="../Lib/Echarts/china.js"></script>
+<script src="../Lib/Visual/data.js"></script>
+<script src="../Lib/Visual/v_monitor.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/price_monitor.js"></script>
+</body>
+</html>

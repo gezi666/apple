@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+</head>
+<body class="true_index">
+
+<div class="header-bg">
+    <div class="header-container">
+        <h1 class="header-content title">
+            <div class="logo icon-logo"></div>
+            <div class="line"></div>
+            <div class="name">苹果大数据应用平台</div>
+        </h1>
+    </div>
+</div>
+
+<div class="index-wrapper">
+    <div class="main">
+        <div class="column-left column">
+            <a href="./apple_product.html" class="row standard lt">
+                <div class="index-description">
+                    <div class="title"><span class="map-year">2015</span><span>年，</span><span class="map-region">全国</span><span>苹果</span><span class="map-status">种植面积</span><span class="map-data">3500</span><span class="map-unites">万亩</span></div>
+                    <span class="newdemand-unite">千吨</span>
+                    <ul class="nav-tab switch-menu">
+                        <li class="switch-item active">种植面积</li>
+                        <li class="switch-item">苹果产量</li>
+                    </ul>
+                </div>
+                <div class="index-cont">
+                    <div class="echart-inst" id="crop-left"></div>
+                    <div class="echart-inst" id="crop-right"></div>
+                </div>
+            </a>
+            <a href="./crop_weather.html" class="row standard lc">
+                <div class="index-description">
+                    <div class="title">苹果单产影响因素分析</div>
+                </div>
+                <div class="echart-inst" id="affect-analyse"></div>
+            </a>
+            <a href="./income_profit.html" class="row standard lb">
+                <div class="index-description">
+                    <div class="title">2015年苹果单位产值150元／公斤，单位净利润50元／公斤，投入产出比100%</div>
+                </div>
+                <div class="echart-inst" id="profit"></div>
+            </a>
+        </div>
+        <div class="column-mid column">
+            <div class="row row-one">
+                <div class="decorate-left">
+                    <div class="shadow-left"></div>
+                    <span class="menu-supply">供给侧分析</span>
+                </div>
+                <div class="decorate-right">
+                    <div class="shadow-right"></div>
+                    <span class="menu-demand">需求侧分析</span>
+                </div>
+                <div class="true-mid">
+                    <div class="item navigator">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="apple_product.html">
+                                    <i class="iconfont icon-nav-product"></i>
+                                    <span>苹果生产</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="consume_situation.html">
+                                    <i class="iconfont icon-nav-consume"></i>
+                                    <span>苹果消费</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="trade_situation.html">
+                                    <i class="iconfont icon-nav-trade"></i>
+                                    <span>对外贸易</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="price_monitor.html">
+                                    <i class="iconfont icon-nav-price"></i>
+                                    <span>市场价格</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="income_cost.html">
+                                    <i class="iconfont icon-kanzhang"></i>
+                                    <span>成本收益</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item meter">
+                        <div class='chart_main'>
+                            <div class="chart_bg">
+                                <span id="speedometer_f"></span>
+                                <span id="speedometer_m"></span>
+                                <span id="speedometer_b"></span>
+                                <div class='frontChart'></div>
+                                <div class='lastChart'></div>
+                                <div class="middleChart"></div>
+                                <img src="../images/chartBg.png" class="posi-sty"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item water">
+                        <div class="waveMain">
+                            <div class="canvasDiv">
+                                <div class="canvasDivLeft-main">
+                                    <canvas id="myCanvasLeft"></canvas>
+                                </div>
+                                <div class="gradientLineLeft"></div>
+                            </div>
+                            <div class="canvasDiv">
+                                <div class="gradientLineRight"></div>
+                                <div class="canvasDivRight-main">
+                                    <canvas id="myCanvasRight"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-two two-side">
+                <a href="./trade_situation.html" class="half standard">
+                    <div class="index-description">
+                        <div class="title">2016全国鲜苹果进口总量300万吨</div>
+                        <ul class="nav-tab switch-menu">
+                            <li class="switch-item active">鲜苹果</li>
+                            <li class="switch-item">苹果干</li>
+                            <li class="switch-item">苹果汁</li>
+                        </ul>
+                    </div>
+                    <div class="echart-inst" id="import-quantity"></div>
+                </a>
+                <a href="./trade_situation.html" class="half standard">
+                    <div class="index-description">
+                        <div class="title">2016全国鲜苹果出口总量300万吨</div>
+                        <ul class="nav-tab switch-menu">
+                            <li class="switch-item active">鲜苹果</li>
+                            <li class="switch-item">苹果干</li>
+                            <li class="switch-item">苹果汁</li>
+                        </ul>
+                    </div>
+                    <div class="echart-inst" id="export-quantity"></div>
+                </a>
+            </div>
+        </div>
+        <div class="column-right column">
+            <div class="row standard">
+                <div class="index-description">
+                    <div class="title">2017-05 全国苹果批发市场交易量8000吨 ，电商交易量2000吨 </div>
+                </div>
+                <div class="echart-inst" id="market"></div>
+            </div>
+            <a href="./consume_supplydemand.html" class="row standard">
+                <div class="index-description">
+                    <div class="title">苹果需求弹性系数分析</div>
+                </div>
+                <div class="echart-inst" id="flexibility"></div>
+            </a>
+            <a href="./trade_situation.html" class="row standard">
+                <div class="index-description">
+                    <div class="title">预测2017年苹果需求量大于苹果供应量200万吨</div>
+                </div>
+                <div class="echart-inst" id="forecast"></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="body-bg">
+    <img src="../images/bg_index.jpg">
+</div>
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script src="../Lib/Echarts/china.js"></script>
+<script src="../Lib/d3/d3.v3.min.js"></script>
+<script src="../Lib/Visual/echarts-liquidfill.js"></script>
+<script src="../Lib/Visual/iopctrl.js"></script>
+<script src="../js/chart-map-library.min.js"></script>
+<script src="../Lib/Visual/ball.js"></script>
+<script src="../Lib/Visual/wave.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/unite.js"></script>
+<script src="../js/true_index.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+{
+  "status": 200,
+  "data": {
+    "arankVale": [
+      "1057",
+      "452",
+      "441",
+      "363",
+      "235",
+      "233",
+      "225",
+      "103",
+      "76",
+      "58"
+    ],
+    "rankVale": [
+      "1100.78",
+      "978.13",
+      "438.58",
+      "428.62",
+      "365.58",
+      "360.11",
+      "256.6",
+      "136.58",
+      "57.17",
+      "42.09"
+    ],
+    "areasData": [
+      {
+        "name": "内蒙古",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          111.670799,
+          40.81831
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "重庆",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          106.504959,
+          29.533155
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "台湾",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          121.509064,
+          25.044333
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "海南",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          110.331192,
+          20.031971
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "吉林",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          125.324501,
+          43.886841
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "香港",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          114.173355,
+          22.320047
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "西藏",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          91.13221,
+          29.66036
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "天津",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          117.190186,
+          39.125595
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "黑龙江",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          126.642464,
+          45.756966
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "贵州",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          106.713478,
+          26.578342
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "安徽",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          117.283043,
+          31.861191
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "广东",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          113.28064,
+          23.125177
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "青海",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          101.778915,
+          36.623177
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "广西",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          108.320007,
+          22.82402
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "湖北",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          114.298569,
+          30.584354
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "四川",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          104.065735,
+          30.659462
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "上海",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          121.472641,
+          31.231707
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "浙江",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          120.15358,
+          30.287458
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "江西",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          115.892151,
+          28.676493
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "湖南",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          112.982277,
+          28.19409
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "福建",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          119.306236,
+          26.075302
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "澳门",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          113.549088,
+          22.198952
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "北京",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          116.405289,
+          39.904987
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "江苏",
+        "value": "",
+        "valueArea": "",
+        "geoCoord": [
+          118.76741,
+          32.041546
+        ],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 0,
+        "valueAreapm": 0
+      },
+      {
+        "name": "陕西",
+        "value": 1100,
+        "valueArea": 1057,
+        "geoCoord": [
+          108.948021,
+          34.263161
+        ],
+        "valuezb": 0.2507,
+        "valueAreazb": 0.3259,
+        "valuepm": 1,
+        "valueAreapm": 1
+      },
+      {
+        "name": "山东",
+        "value": 978,
+        "valueArea": 452,
+        "geoCoord": [
+          117.000923,
+          36.675808
+        ],
+        "valuezb": 0.2229,
+        "valueAreazb": 0.1394,
+        "valuepm": 2,
+        "valueAreapm": 2
+      },
+      {
+        "name": "河南",
+        "value": 438,
+        "valueArea": 235,
+        "geoCoord": [
+          113.665413,
+          34.757977
+        ],
+        "valuezb": 0.0998,
+        "valueAreazb": 0.0725,
+        "valuepm": 3,
+        "valueAreapm": 5
+      },
+      {
+        "name": "山西",
+        "value": 428,
+        "valueArea": 225,
+        "geoCoord": [
+          112.549248,
+          37.857014
+        ],
+        "valuezb": 0.0975,
+        "valueAreazb": 0.0694,
+        "valuepm": 4,
+        "valueAreapm": 7
+      },
+      {
+        "name": "河北",
+        "value": 365,
+        "valueArea": 363,
+        "geoCoord": [
+          114.502464,
+          38.045475
+        ],
+        "valuezb": 0.0832,
+        "valueAreazb": 0.1119,
+        "valuepm": 5,
+        "valueAreapm": 4
+      },
+      {
+        "name": "甘肃",
+        "value": 360,
+        "valueArea": 441,
+        "geoCoord": [
+          103.823555,
+          36.058041
+        ],
+        "valuezb": 0.082,
+        "valueAreazb": 0.136,
+        "valuepm": 6,
+        "valueAreapm": 3
+      },
+      {
+        "name": "辽宁",
+        "value": 256,
+        "valueArea": 233,
+        "geoCoord": [
+          123.429092,
+          41.796768
+        ],
+        "valuezb": 0.0583,
+        "valueAreazb": 0.0718,
+        "valuepm": 7,
+        "valueAreapm": 6
+      },
+      {
+        "name": "新疆",
+        "value": 136,
+        "valueArea": 103,
+        "geoCoord": [
+          87.617729,
+          43.792816
+        ],
+        "valuezb": 0.031,
+        "valueAreazb": 0.0318,
+        "valuepm": 8,
+        "valueAreapm": 8
+      },
+      {
+        "name": "宁夏",
+        "value": 57,
+        "valueArea": 58,
+        "geoCoord": [
+          106.278175,
+          38.46637
+        ],
+        "valuezb": 0.013,
+        "valueAreazb": 0.0179,
+        "valuepm": 9,
+        "valueAreapm": 10
+      },
+      {
+        "name": "云南",
+        "value": 42,
+        "valueArea": 76,
+        "geoCoord": [
+          102.71225,
+          25.040609
+        ],
+        "valuezb": 0.0096,
+        "valueAreazb": 0.0234,
+        "valuepm": 10,
+        "valueAreapm": 9
+      }
+    ],
+    "arankName": [
+      "陕西",
+      "山东",
+      "甘肃",
+      "河北",
+      "河南",
+      "辽宁",
+      "山西",
+      "新疆",
+      "云南",
+      "宁夏"
+    ],
+    "rankName": [
+      "陕西",
+      "山东",
+      "河南",
+      "山西",
+      "河北",
+      "甘肃",
+      "辽宁",
+      "新疆",
+      "宁夏",
+      "云南"
+    ],
+    "currentAreaData": [
+      {
+        "name": "全国",
+        "value": 4388,
+        "valueArea": 3243,
+        "geoCoord": [],
+        "valuezb": "",
+        "valueAreazb": "",
+        "valuepm": 1,
+        "valueAreapm": 1
+      }
+    ]
+  }
+}

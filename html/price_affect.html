@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <title>苹果大数据应用平台</title>
+  <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <script src="../Lib/jquery-1.12.4.min.js"></script>
+  <script src="../Lib/time-scrollbar.js"></script>
+  <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body class="price_affect">
+  <div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+  <div class="wrapper">
+    <div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item price_monitor">
+            <h2><i class="iconfont icon-monitor"></i><a href="price_monitor.html">价格监测</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_monitor_实时监测">实时监测</a></li>
+                <li><a href="#price_monitor_涨跌幅排名">涨跌幅排名</a></li>
+                <li><a href="#price_monitor_价格走势">价格走势</a></li>
+                <li><a href="#price_monitor_季节性规律">季节性规律</a></li>
+            </ul>
+        </dt>
+        <!--<dt class="navbar-item price_market" id="section-2">
+            <h2><i class="iconfont icon-liutong"></i><a href="price_market.html">市场流通</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_market_流向监测">流向监测</a></li>
+                <li><a href="#price_market_流向分析">流向分析</a></li>
+            </ul>
+        </dt>-->
+        <dt class="navbar-item price_conduction" id="section-3">
+            <h2><i class="iconfont icon-chuandao"></i><a href="price_conduction.html">传导机制</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_conduction_地区性">地区性</a></li>
+                <li><a href="#price_conduction_时滞性">时滞性</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_affect" id="section-4">
+            <h2><i class="iconfont icon-yingxiang"></i><a href="price_affect.html">影响因素</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_affect_各环节价格">各环节价格</a></li>
+                <li><a href="#price_affect_多因素影响">多因素影响</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_forecast" id="section-5">
+            <h2><i class="iconfont icon-yuce"></i><a href="price_forecast.html">预测预警</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_forecast_价格预警">价格预警</a></li>
+                <li><a href="#price_forecast_涨跌预警">涨跌预警</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+    <div class="cont">
+      <div id="price_affect_各环节价格" class="section per-price">
+        <div class="sec-top">
+          <h3 class="pub-title">各环节价格</h3>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct weather-help">
+                        <div class="diy-scroll wbIntro">
+                            <p>基于向量自回归（VAR）模型对影响因素和全国苹果年平均价格进行分析，通过方差分解得到影响因素对苹果价格的贡献度。</p>
+                            <p class='help-title'>(1)计算思路</p>
+                            <p>VAR模型是一种常用的计量经济模型，它可以用来预测相关联的经济时间序列系统，并分析随机扰动对系统变量的动态冲击，进一步解释经济冲击对经济变量所产生的影响。以各个影响因素和苹果价格序列来构造VAR模型，并通过单位根（平稳性）检验、协整检验、格兰杰因果检验来确定模型的稳定性以及各影响因素与苹果价格的因果关系，再使用方差分解来确定各影响因素对苹果价格影响的程度，即所谓贡献度。</p>
+                            <p class='help-title'>(2)图表解读</p>
+                            <p>若进口量因素对苹果批发价格的贡献度为27%，表示当前价格的变动27%是由进口量的变化引起的。</p>
+                            <p class='help-title'>(3)数据来源</p>
+                            <p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="special-else">
+              <ul class="time-tab price">
+                  <li class="active">月度</li>
+                  <li>年度</li>
+              </ul>
+          </div>
+        </div>
+        <div class="sectop-two">
+            <div class="sel-areas">
+                <span>地区： </span>
+                <div class="fake-ul">
+                    <span class="sel-area">全国</span>
+                    <i class="iconfont icon-xiala"></i>
+                    <ul class='priceSelect'>
+                        <li>新疆维吾尔族自治区</li>
+                        <li>陕西</li>
+                        <li>山西</li>
+                        <li>河北</li>
+                        <li>河南</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct">
+          <div>
+            <div class="sec-part">
+              <div id="per-price" class="echart-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="price_affect_多因素影响" class="section muti-influence" >
+        <div class="sec-top">
+          <h3 class="pub-title">多因素影响</h3>
+        </div>
+
+        <div class="sectop-two">
+            <div>
+                <span>苹果批发价格波动影响因素（贡献率：%）</span>
+            </div>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct weather-help">
+                        <div class="diy-scroll wbIntro">
+                            <p>基于向量自回归（VAR）模型对影响因素和全国苹果年平均价格进行分析，通过方差分解得到影响因素对苹果价格的贡献度。</p>
+                            <p class='help-title'>(1)计算思路</p>
+                            <p>VAR模型是一种常用的计量经济模型，它可以用来预测相关联的经济时间序列系统，并分析随机扰动对系统变量的动态冲击，进一步解释经济冲击对经济变量所产生的影响。以各个影响因素和苹果价格序列来构造VAR模型，并通过单位根（平稳性）检验、协整检验、格兰杰因果检验来确定模型的稳定性以及各影响因素与苹果价格的因果关系，再使用方差分解来确定各影响因素对苹果价格影响的程度，即所谓贡献度。</p>
+                            <p class='help-title'>(2)图表解读</p>
+                            <p>若进口量因素对苹果批发价格的贡献度为27%，表示当前价格的变动27%是由进口量的变化引起的。</p>
+                            <p class='help-title'>(3)数据来源</p>
+                            <p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec-ct">
+          <div>
+            <div class="sec-part">
+              <div id="muti-influence" class="echart-box important" style="height:400px;"></div>
+              <div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+  
+
+  <!-- 整体的背景图片样式 -->
+  <!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+  <script src="../Lib/Echarts/echarts.common.min.js"></script>
+  <script src="../Lib/Echarts/echarts-engine.js"></script>
+  <script src="../js/public.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      //各环节价格 eharts
+
+      //1.默认要传的东西
+      var priceParam = {
+          url:'yourUrl',
+          time:'月度',
+          area:'全国'
+      }
+
+      //2.发送请求  返回数据
+
+      data1 = {
+        year: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016'],
+        data1: [10, 20, 30, 20, 10, 10, 20, 30, 40, 50], //收购价格
+        data2: [20, 30, 40, 30, 20, 50, 40, 45, 50, 55], //批发价格
+        data3: [30, 40, 50, 40, 30, 80, 50, 60, 80, 77]  //零售价格
+      }
+
+      data2 = {
+        year: ['2007-1', '2007-2', '2007-3', '2007-4', '2007-5', '2007-6', '2007-7', '2007-8', '2007-9', '2007-10'],
+        data1: [30, 10, 30, 10, 10, 10, 20, 30, 40, 50], //收购价格
+        data2: [20, 60, 40, 30, 20, 10, 40, 45, 10, 55], //批发价格
+        data3: [30, 20, 50, 40, 80, 80, 50, 60, 10, 77]  //零售价格
+      }
+
+     //初始化
+      perPricechart.init({
+        dom: "per-price",
+        time:priceParam.time,
+        area:priceParam.area,
+        data:data1
+      })
+
+
+      //点击时间，地区切换
+      $(".time-tab.price").on('click', 'li', function() {
+              //可取得当前选择的地区
+              var currentArea;
+              $('.priceSelect li').each(function(i,a){
+                if ($(this).hasClass('active')) {
+                    currentArea = $(this).text();
+                }
+              })
+              console.log($(this).text()+' '+currentArea)
+              perPricechart.init({
+                  dom: "per-price",
+                  time:$(this).text(),
+                  area:currentArea,
+                  data:data2
+                })
+            })
+          //下拉地区
+      $(".priceSelect li").on('click', function() {
+          //取得当前选择的时间
+          var currentTime;
+          $('.time-tab.price li').each(function(i, a) {
+              if ($(this).hasClass('active')) {
+                  currentTime = $(this).text();
+              }
+          })
+          console.log(currentTime+ '' + $(this).text());
+          perPricechart.init({
+            dom: "per-price",
+            time:currentTime,
+            area:$(this).text(),
+            data:data1
+          })
+      })
+
+
+
+
+      //多因素影响
+      var mutiInfluenceObj = [{
+          value: 300,
+          name: '产量'
+        },
+        {
+          value: 200,
+          name: '种植面积'
+        },
+        {
+          value: 150,
+          name: '鲜果类居民消费价格指数'
+        },
+        {
+          value: 350,
+          children: [{
+            name: '出口量',
+            value: 100,
+
+          }, {
+            name: '居民消费价格指数',
+            value: 125,
+
+          }, {
+            name: '甘蔗价格',
+            value: 125,
+          }]
+        }
+      ];
+
+
+      var cont = 0;
+      mutiInfluenceObj.forEach(function(v, i, a) {
+        cont += v.value;
+      })
+      mutiInfluenceObj.forEach(function(v, i, a) {
+        v.name = v.name + (v.value / cont) * 100 + '%';
+        if (v.children) {
+          v.children.forEach(function(v1, i, a) {
+            v1.name = v1.name + (v1.value / cont)* 100 + '%';
+          })
+        }
+      });
+
+
+      mutiInfluence.init({
+        dom: "muti-influence",
+        data: mutiInfluenceObj
+      })
+
+
+
+    })
+
+
+
+
+
+    var perPricechart = {
+      init: function(opts) {
+        var me = this;
+        if (!opts.dom) throw new Error('未检测到dom');
+        else dom = opts.dom;
+        me.myChart = echarts.init(document.getElementById(dom));
+        me.opts = option = {
+          title: {
+            text: ''
+          },
+          tooltip: {
+            trigger: 'axis',
+              axisPointer: {
+                  type: 'shadow',
+                  shadowStyle: {
+                      color: 'rgba(0,46, 115, 0.3)'
+                  }
+              },
+              textStyle: {
+                  align: 'left',
+                  color: '#5cc1ff',
+                  fontSize: '16'
+              },
+              backgroundColor: 'rgba(15, 52, 135, 0.5)',
+              borderWidth: '1',
+              borderColor: '#5cc1ff',
+              extraCssText: 'box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);',
+            // formatter: "{b}年: <br />全国果园面积：{c1}万亩 <br> 全国苹果园面积：{c0}万亩",
+            textStyle: {
+              color: '#fff',
+              fontSize: 14
+            }
+          },
+          legend: {
+            data: ['收购价格', '批发价格','零售价格' ],
+            //bottom: 0,
+            right:60,
+            textStyle: {
+              color: '#fff',
+              fontSize: 14
+            }
+
+          },
+
+          grid: {
+            left: '15',
+            right: '50',
+            bottom: '30',
+            containLabel: true
+          },
+          xAxis: {
+            type: 'category',
+            axisLabel:{
+              textStyle:{
+                color:echartOpt.color,
+                fontSize: echartOpt.fz
+              }
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#3fa7dc'
+              }
+            },
+            splitLine: {
+              show: false
+            },
+            boundaryGap: false,
+            triggerEvent: true,
+            data: opts.data.year
+          },
+          yAxis: {
+            type: 'value',
+            name:'元／公斤',
+            nameTextStyle:{
+              fontSize: echartOpt.fz,
+              color:  echartOpt.color
+            },
+            axisLabel:{
+              textStyle:{
+                color:echartOpt.color,
+                fontSize: echartOpt.fz
+              }
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#3fa7dc'
+              },
+
+            },
+            splitLine: {
+              show: true,
+              formatter: '{value}',
+              lineStyle: {
+                color: '#476bbe'
+              }
+            }
+          },
+          color: ['#00e6f2', '#e7ea00', '#ffa91a'],
+          series: [{
+              name: '收购价格',
+              smooth: true,
+              type: 'line',
+            //  stack: '总量',
+              // areaStyle: {
+              //   normal: {
+              //     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              //       offset: 0,
+              //       color: 'rgba(30,144,187,1)'
+              //     }, {
+              //       offset: 1,
+              //       color: 'rgba(30,144,187,.5)'
+              //     }])
+              //   }
+              // },
+              data: opts.data.data1
+
+            },
+            {
+              name: '批发价格',
+              type: 'line',
+              smooth: true,
+            //  stack: '总量',
+              // areaStyle: {
+              //   normal: {
+              //     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              //       offset: 0,
+              //       color: 'rgba(111,160,133,1)'
+              //     }, {
+              //       offset: 1,
+              //       color: 'rgba(111,160,133,5)'
+              //     }])
+              //   }
+              // },
+              data: opts.data.data2
+            },
+            {
+              name: '零售价格',
+              type: 'line',
+              smooth: true,
+            //  stack: '总量',
+              // areaStyle: {
+              //   normal: {
+              //     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              //       offset: 0,
+              //       color: 'rgba(154,142,78,1)'
+              //     }, {
+              //       offset: 1,
+              //       color: 'rgba(154,142,78,.5)'
+              //     }])
+              //   }
+              // },
+              data: opts.data.data3
+            }
+          ]
+        };
+        me.myChart.setOption(me.opts)
+      }
+
+    }
+
+    var mutiInfluence = {
+      init: function(opts) {
+        var me = this;
+        if (!opts.dom) throw new Error('未检测到dom');
+        else dom = opts.dom;
+        me.myChart = echarts.init(document.getElementById(dom));
+        me.opts = option = {
+          tooltip: {
+            trigger: 'item',
+            formatter: function(params) {
+              // console.log(params)
+              if (params.value === 0) {
+                return '暂无数据'
+              } else {
+                // return params.name + ":" + params.value;
+                return params.name
+              }
+            }
+          },
+
+          color: "",
+          series: [{
+            left: 30,
+            name: '',
+            type: 'treemap',
+            width: '90%',
+            height: '90%',
+            roam: false, //是否开启拖拽漫游（移动和缩放）
+            nodeClick: false, //点击节点后的行为,false无反应
+            label: {
+              normal: {
+                textStyle: {
+                  fontWeight: 'bold',
+                  fontSize: '16',
+                },
+                position: [10, 10]
+
+              }
+
+
+            },
+
+            breadcrumb: { //关闭面包屑路径
+              show: false
+            },
+            itemStyle: {
+              normal: {
+                label: {
+                  show: true,
+                  formatter: "{b}"
+                },
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                  offset: 1,
+                  color: 'rgba(59,147,229, 0.8)'
+                }, {
+                  offset: 0,
+                  color: 'rgba(59,147,229, 0.4)'
+                }]),
+                borderWidth: 0.51,
+                borderColor: '#ccc'
+              },
+              emphasis: {
+                label: {
+                  show: true
+                },
+                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                  offset: 1,
+                  color: 'rgba(225,204,42, 0.8)'
+                }, {
+                  offset: 0,
+                  color: 'rgba(225,204,42,  0.4)'
+                }]),
+                borderWidth: 3,
+                borderColor: 'rgb(225,204,42)'
+              }
+            },
+            data: [{
+                value: opts.data[0].value,
+                name: opts.data[0].name,
+                label: {
+                  normal: {
+                    textStyle: {
+                      fontSize: 24
+                    }
+                  }
+                }
+
+              },
+              {
+                value: opts.data[1].value,
+                name: opts.data[1].name,
+                label: {
+                  normal: {
+                    textStyle: {
+                      fontSize: 22
+                    }
+                  }
+                }
+              },
+
+              {
+                value: opts.data[2].value,
+                name: opts.data[2].name,
+                label: {
+                  normal: {
+                    textStyle: {
+                      fontSize: 20
+                    }
+                  }
+                }
+              },
+
+
+
+              {
+                value: opts.data[3].value,
+                itemStyle: {
+                  normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                      offset: 1,
+                      color: 'rgba(48,109,202, 0.8)'
+                    }, {
+                      offset: 0,
+                      color: 'rgba(48,109,202, 0.4)'
+                    }]),
+                  }
+                },
+
+                children: [{
+                  name: opts.data[3].children[0].name,
+                  value: opts.data[3].children[0].value,
+
+                }, {
+                  name: opts.data[3].children[1].name,
+                  value: opts.data[3].children[1].value,
+
+                }, {
+                  name: opts.data[3].children[2].name,
+                  value: opts.data[3].children[2].value,
+
+                }]
+              },
+
+              {
+                value: 0,
+                itemStyle: {
+                  normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                      offset: 1,
+                      color: 'rgba(50,91,193, 0.8)'
+                    }, {
+                      offset: 0,
+                      color: 'rgba(50,91,193, 0.4)'
+                    }]),
+                  }
+                },
+
+                children: [{
+                  name: '河南',
+                  value: 0,
+
+
+
+                }, {
+                  name: '安徽',
+                  value: 0,
+
+                }, {
+                  name: '黑龙江',
+                  value: 0,
+
+                }, {
+                  name: '新疆',
+                  value: 0,
+
+                }]
+              }
+            ]
+          }]
+        };
+        me.myChart.setOption(me.opts)
+      }
+    }
+  </script>
+</body>
+
+</html>

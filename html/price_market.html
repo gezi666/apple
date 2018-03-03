@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+</head>
+<body class="price_market">
+<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item consume_situation">
+            <h2><i class="iconfont icon-consume_situation"></i><a href="consume_situation.html">消费现状</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_situation_消费总量">消费总量</a></li>
+                <li><a href="#consume_situation_消费结构">消费结构</a></li>
+                <li><a href="#consume_situation_消费水平">消费水平</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item consume_supplydemand">
+            <h2><i class="iconfont icon-consume_supplydemand"></i><a href="consume_supplydemand.html">供求分析</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_supplydemand_供求现状">供求现状</a></li>
+                <li><a href="#consume_supplydemand_供求与价格">供求与价格</a></li>
+                <li><a href="#consume_supplydemand_供求预测">供求预测</a></li>
+                <li><a href="#consume_supplydemand_需求影响因素">需求影响因素</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_market">
+            <h2><i class="iconfont icon-liutong"></i><a href="price_market.html">市场流通</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_market_流向监测">流向监测</a></li>
+                <li><a href="#price_market_流向分析">流向分析</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item consume_channel">
+            <h2><i class="iconfont icon-consume_channel"></i><a href="consume_channel.html">消费渠道</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_channel_渠道分布">渠道分布</a></li>
+                <li><a href="#consume_channel_渠道销量">渠道销量</a></li>
+                <li><a href="#consume_channel_渠道特征">渠道特征</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item consume_blueprint">
+            <h2><i class="iconfont icon-consume_blueprint"></i><a href="consume_blueprint.html">产品画像</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_blueprint_产地偏好">产地偏好</a></li>
+                <li><a href="#consume_blueprint_特产品类热度">特产品类热度</a></li>
+                <li><a href="#consume_blueprint_档次偏好">档次偏好</a></li>
+                <li><a href="#consume_blueprint_交叉组合偏好">交叉组合偏好</a></li>
+                <li><a href="#consume_blueprint_产品品牌热度">产品品牌热度</a></li>
+            </ul>
+        </dt>
+
+    </dl>
+</div>
+
+<div class="cont">
+    <div id="price_market_流向监测" class="section stream-monitor">
+        <div class="sec-top">
+            <h3 class="pub-title">流向监测</h3>
+            <div class="special-else">
+                <ul class="time-tab">
+                    <li class="active" data-areaid='2'>主销区</li>
+                    <li data-areaid='1'>主产区</li>
+                </ul>
+            </div>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct">
+                        <div class="diy-scroll">
+							<p>农产品的价格会显著地受到季节影响，通过综合20年的月均价格，可以计算得到不同月份对价格的贡献。</p>
+                            <p class='help-title'>（1）图表解读 </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p class='help-title'>（2）计算思路</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p>
+							<p class='help-title'>（3）数据来源</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectop-two">
+            <div class="sel-areas">
+                <span class="which-area">主销区： </span>
+                <div class="fake-ul">
+                    <span class="sel-area">北京</span>
+                    <i class="iconfont icon-xiala"></i>
+                    <ul>
+                        <li>上海</li>
+                        <li data-areaid='554555'>广东</li>
+                        <li>广西</li>
+                        <li>福建</li>
+                        <li>四川</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct tab-ct" style="padding-top: 0;">
+            <div>
+                <div class="sec-part" style="position: relative;">
+                    <div class="section-desc special-center">
+                        <span class="destination">北京</span><span>苹果</span><span class="direction">来源</span><span>分析</span>
+                    </div>
+                    <div id="stream-monitor" class="echart-box important h900"></div>
+                    <div id="strmon-tc" class="time-control"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="price_market_流向分析" class="section stream-analyse">
+        <div class="sec-top">
+            <h3 class="pub-title">流向分析</h3>
+            <div class="else">
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct important">
+                        <div class="diy-scroll scorllbar-inner">
+							<p>农产品的价格会显著地受到季节影响，通过综合20年的月均价格，可以计算得到不同月份对价格的贡献。</p>
+                            <p class='help-title'>（1）图表解读 </p>
+                            <p>若当前农产品的季节性规律中5月份的点在4月份的点的上方，则表示该农产品历年来5月份的批发价格普遍比4月份贵。</p>
+                            <p class='help-title'>（2）计算思路</p>
+                            <p>通过对月均价格的时间序列进行分解，将时间序列波动的因素分解成季节性规律、长期趋势和中短期波动。通过中心化移动平均值计算趋势项，并用原始时间序列减去趋势项来去除长期趋势和中短期波动，再将每年的各个月份的值进行平均，从而得到季节性的规律。</p>
+							<p class='help-title'>（3）数据来源</p>
+							<p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectop-two">
+            <div class="sel-areas">
+                <span class="which-area">主销区： </span>
+                <div class="fake-ul">
+                    <span class="sel-area">北京</span>
+                    <i class="iconfont icon-xiala"></i>
+                    <ul>
+                        <li>上海</li>
+                        <li>广西</li>
+                        <li>福建</li>
+                        <li>四川</li>
+                        <li>湖南</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct tab-ct">
+            <div>
+                <div class="sec-part">
+                    <div class="w40">
+                        <div id="stream-analyse1" class="echart-box"></div>
+                        <div id="strmon-ana1" class="time-control"></div>
+                    </div>
+                    <div class="w50">
+                        <div id="stream-analyse2" class="echart-box"></div>
+                        <div id="strmon-ana2" class="time-control"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<!-- 整体的背景图片样式 -->
+<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script src="../Lib/Echarts/china.js"></script>
+<!-- <script src="../Lib/time-scrollbar.js"></script> -->
+<script src="../js/public.js"></script>
+<script src="../js/unite.js"></script>
+<script src="../js/price_market.js"></script>
+</body>
+</html>
+

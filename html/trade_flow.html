@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+</head>
+<body class="trade_flow">
+<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item trade_situation">
+            <h2><i class="iconfont icon-trade_situation"></i><a href="trade_situation.html">贸易现状</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#trade_situation_贸易规模">贸易规模</a></li>
+                <li><a href="#trade_situation_贸易趋势">贸易趋势</a></li>
+                <li><a href="#trade_situation_地区比较">地区比较</a></li>
+                <li><a href="#trade_situation_贸易排名">贸易排名</a></li>
+                <li><a href="#trade_situation_季节性规律">季节性规律</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item trade_flow">
+            <h2><i class="iconfont icon-trade_flow"></i><a href="trade_flow.html">贸易流向</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#trade_flow_全国流向">全国流向</a></li>
+                <li><a href="#trade_flow_地区流向">地区流向</a></li>
+            </ul>
+        </dt>
+<!--         <dt class="navbar-item trade_price">
+            <h2><i class="iconfont icon-trade_price"></i><a href="trade_price.html">贸易价格</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#trade_price_价格趋势">价格趋势</a></li>
+                <li><a href="#trade_price_国内价格与贸易价格关系">国内价格与贸易价格关系</a></li>
+            </ul>
+        </dt> -->
+        <dt class="navbar-item trade_influence">
+            <h2><i class="iconfont icon-trade_fluence"></i><a href="trade_influence.html">影响因素</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#trade_influence_价格趋势">价格趋势</a></li>
+                <li><a href="#trade_influence_影响因素">影响因素</a></li>
+                <li><a href="#trade_influence_出口贸易">出口贸易</a></li>
+                <li><a href="#trade_influence_进口贸易">进口贸易</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item trade_world">
+            <h2><i class="iconfont icon-quanqiu"></i><a href="trade_world.html">全球贸易</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#trade_world_历史演变">历史演变</a></li>
+                <li><a href="#trade_world_贸易分布">贸易分布</a></li>
+                <li><a href="#trade_world_贸易比重">贸易比重</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+<div class="cont">
+    <div id="trade_flow_全国流向" class="section country-flow">
+        <div class="sec-top">
+            <h3 class="pub-title">全国流向</h3>
+            <div class="else">
+                <div class="sel-areas">
+                    <!-- <span class="which-area">主销区： </span> -->
+                    <div class="fake-ul">
+                        <span class="sel-area">鲜苹果</span>
+                        <i class="iconfont icon-xiala"></i>
+                        <ul>
+                            <li>鲜苹果</li>
+                            <li>苹果干</li>
+                            <li>苹果汁</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="pub-radio">
+                    <li class="active">出口</li>
+                    <li>进口</li>
+                </ul>
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct">
+                        <div class="diy-scroll">
+                            <p class='help-title'>（1）数据来源</p>
+                            <p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct">
+            <div>
+                <div class="sec-part" style="position: relative;">
+                    <div id="country-flow" class="echart-box special-height" style="width: 100%!important"></div>
+                    <div class="right-echart special-height" style="width: 25%!important; position: absolute; left: 0; top: 0;">
+                        <h3 class="description"><span class="year">2016</span><span>年我国苹果</span><span class="flow">出口</span><span>前十国家（万吨）</span></h3>
+                        <div class="echart-ct">
+                            <div id="front-ten" class="echart-box calc-height-two"></div>
+                        </div>
+                        <button class="toggle-down"><i class="iconfont icon-shouqi"></i></button>
+                    </div>
+                </div>
+                <div id="country-flow-time" style="margin-top: 70px;z-index: 99;"></div>
+            </div>
+        </div>
+    </div>
+    <div id="trade_flow_地区流向" class="section areas-flow">
+        <div class="sec-top">
+            <h3 class="pub-title">地区流向</h3>
+            <div class="else">
+                <div class="sel-areas">
+                    <!-- <span class="which-area">主销区： </span> -->
+                    <div class="fake-ul">
+                        <span class="sel-area">鲜苹果</span>
+                        <i class="iconfont icon-xiala"></i>
+                        <ul>
+                            <li>鲜苹果</li>
+                            <li>苹果干</li>
+                            <li>苹果汁</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="pub-radio">
+                    <li class="active">出口</li>
+                    <li>进口</li>
+                </ul>
+                <div class="help">
+                    <button><i class="iconfont icon-wenhao"></i></button>
+                    <div class="help-ct">
+                        <div class="diy-scroll">
+                            <p class='help-title'>（1）数据来源</p>
+                            <p>农业部</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-ct">
+            <div>
+                <div class="sec-part">
+                    <div id="areas-flow" class="echart-box special-height-three" style="width: 70%!important"></div>
+                    <div class="right-echart special-height-three" style="width: 25%!important">
+                        <h3 class="description"><span class="area">华北地区</span><span class="flow">出口去向</span><span>（万吨）</span></h3>
+                        <div class="echart-ct">
+                            <div id="detail-area-flow" class="echart-box calc-height"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="areas-flow-time" style="margin-top: 60px;z-index: 99;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script src="../Lib/Echarts/world.js"></script>
+<script src="../Lib/Echarts/china.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/unite.js"></script>
+<script src="../js/trade_flow.js"></script>
+</body>
+</html>

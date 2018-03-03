@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+</head>
+<body class="globe_apple">
+<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+<div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item production_status">
+            <h2><i class="iconfont icon-fenxi"></i><a href="apple_product.html">生产现状</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#production_status_空间分布">空间分布</a></li>
+                <li><a href="#production_status_历史演变">历史演变</a></li>
+                <!--<li><a href="#production_status_生产占比">生产占比</a></li>
+                <li><a href="#production_status_品种结构">品种结构</a></li>
+                <li><a href="#production_status_树龄结构">树龄结构</a></li>
+                <li><a href="#production_status_25年以上老龄苹果园分布">25年以上老龄苹果园分布</a></li>
+                <li><a href="#production_status_果农年龄结构">果农年龄结构</a></li>
+                <li><a href="#production_status_果农老龄化预测">果农老龄化预测</a></li>-->
+            </ul>
+        </dt>
+        <dt class="navbar-item produce_advantage" id="section-2">
+            <h2><i class="iconfont icon-chanqu"></i><a href="produce_advantage.html">产区优势</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#produce_advantage_规模优势">规模优势</a></li>
+                <li><a href="#produce_advantage_效率优势">效率优势</a></li>
+                <li><a href="#produce_advantage_效益优势">效益优势</a></li>
+                <!--<li><a href="#produce_advantage_产区优势历史演变">产区优势历史演变</a></li>-->
+            </ul>
+        </dt>
+        <dt class="navbar-item crop_weather" id="section-3">
+            <h2><i class="iconfont icon-qixiang"></i><a href="crop_weather.html">作物气象</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#crop_weather_影响因素">影响因素</a></li>
+                <li><a href="#crop_weather_灾害临界值">灾害临界值</a></li>
+                <li><a href="#crop_weather_灾害监测">灾害监测</a></li>
+                <li><a href="#crop_weather_单产预测">单产预测</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item globe_apple" id="section-4">
+            <h2><i class="iconfont icon-quanqiu"></i><a href="globe_apple.html">全球生产</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#globe_apple_空间分布">空间分布</a></li>
+                <li><a href="#globe_apple_历史演变">历史演变</a></li>
+                <li><a href="#globe_apple_生产占比">生产占比</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+<div class="cont">
+    <div id="globe_apple_空间分布" class="section space-distributed">
+        <div class="sec-top">
+            <h3 class="pub-title">空间分布</h3>
+            <div class="else">
+                <ul class="pub-radio maptab-nav">
+                    <li class="active">种植面积</li>
+                    <li>产量</li>
+                </ul>
+            </div>
+				<div class="help mrl20">
+					<button><i class="iconfont icon-wenhao"></i></button>
+					<div class="help-ct weather-help">
+						<div class="diy-scroll">
+							<p class='help-title'>(1)数据来源</p>
+							<p>农业部</p>
+						</div>
+					</div>
+				</div>
+        </div>
+        <div class="sec-ct maptab-ct">
+            <div>
+                <div class="sec-part" style="position: relative;">
+                    <div class="section-desc special-center">
+                        <span class="map-year">2015</span><span>年</span><span class="map-region">全国</span><span>苹果</span><span class="map-status">种植面积</span><span class="map-data strong-gold">3500</span><span class="map-unites">万亩</span>
+                    </div>
+                    <div id="space-distributed" class="one special-height" style="width: 100%;">
+                        <!-- <div class="topName"></div> -->
+                        <div class="map"></div>
+                        <!-- <div class="tooltip"></div> -->
+                        <div id="space-distributed-time" style="z-index: 99;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="globe_apple_历史演变" class="section history">
+        <div class="sec-top">
+            <h3 class="pub-title">历史演变</h3>
+            <div class="else">
+                <div class="pop-time">
+                    <div class="time-des">时间：</div>
+                    <div class="time-txt">2013-2017</div>
+                    <ul class="time-list">
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>1995-1999</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2000-2004</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2005-2009</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2010-2014</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2015-2017</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pub-icon tab-nav">
+                    <button class="icon-btn active"><i class="iconfont icon-tongji"></i></button>
+                    <button class="icon-btn"><i class="iconfont icon-caidan"></i></button>
+                </div>
+                <div class="pub-check">
+                    <dl class="fixlocation">
+                        <dt>地区：</dt>
+                        <dd class="locations">
+                            <span>全球</span>
+                            <span>中国</span>
+                            <span>印度</span>
+                        </dd>
+                    </dl>
+                    <div class="another-location">
+                        <span class="for-pop">国家</span>
+                        <div class="pop-areas">
+                            <ul class="areas scrollbar-inner">
+                                <li class="area-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>中国</span>
+                                    </label>
+                                </li>
+                                <li class="area-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>美国</span>
+                                    </label>
+                                </li>
+                                <li class="area-item">
+                                    <label>
+                                        <input type="checkbox">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>印度</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="yesorno-btn">
+                                <button class="yes" style="margin-right: 30px;">确认</button>
+                                <button class="no">清除</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pub-radio">
+                    <li class="active">种植面积</li>
+                    <li>产量</li>
+                    <li>单产</li>
+                </ul>
+                <button class="download"><i class="iconfont icon-xiazai"></i></button>
+            </div>
+
+				<div class="help mrl20">
+					<button><i class="iconfont icon-wenhao"></i></button>
+					<div class="help-ct weather-help">
+						<div class="diy-scroll">
+							<p>规模优势指数反映一个地区某种作物的规模化程度。</p>
+							<p class='help-title'>(1)计算公式：</p>
+							<p><code> SAIij = ( GSij /GSi) /( GSj /GS)</code></p>
+							<p class='help-title'>(2)式中:</p>
+							<p>SAIij 为规模优势指数; GSij 为 i 区 j 种农产品的播种面积; GSi 为 i 区所有农产品的播种面积之和; GSj 为全国 j 种农产品的播种面积; GS 为全国所有农产品的播种面积之和。 </p>
+							<p>SAIij ＜ 1，说明与全国平均水平相比， i 区 j 种作物在生产规模上处于劣势; SAIij ＞ 1，说明与全国平均水平相比，i 区 j 种作物在生产规模上处于优势; SAIij值越大， 说明作物的规模比较优势越明显。</p>
+							<p class='help-title'>(3)数据来源</p>
+							<p>农业部</p>
+						</div>
+					</div>
+				</div>
+        </div>
+        <div class="section-desc">
+            <span class="des-year">2011-2014</span><span>年，全球苹果年平均增长率</span><span class="strong-gold desc-rate">4</span><span>％</span><!-- ，<span class="des-last-year">2014</span>年<span class="newdanwei">种植面积</span><span class="strong-gold desc-yield">8200</span><span class="danwei">万吨</span> -->
+        </div>
+        <div class="sec-ct tab-ct">
+            <div>
+                <div class="sec-part">
+                    <div id="history" class="echart-box"></div>
+                </div>
+                <div class="desc-edit">
+                    <div class="top">
+                        <span class="desc-word">描述</span>
+                        <button class="fr edit-btn">
+                            <i class="iconfont icon-bianji"></i>
+                            <span>编辑</span>
+                        </button>
+                    </div>
+                    <div class="desc-ct">
+                        <textarea class="edit-ct scrollbar-inner" disabled="">2005-2014年，全球苹果产量年平均变化率4%，2014年产量8200万吨。中国苹果产量，年平均变化率3.5%，2014年产量4090万吨。美国苹果产量年平均变化率4%，2014年产量519万吨。</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="din">
+                <table class="sheet" id="historyTable">
+                </table>
+
+                <script id="person" type="text/x-handlebars-template">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            {{#each arr}}
+                                {{#if flag}}
+                                    {{#each value}}
+                                        <th>{{time}}</th>
+                                    {{/each}}
+                                {{/if}}
+                            {{/each}}
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title}}</td>
+                                <td>{{name}}</td>
+                                {{#each value}}
+                                    <td><input disabled="" type="text" value="{{sumData}}" /></td>
+                                {{/each}}
+                                <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                </script>
+
+
+                <script id="person1" type="text/x-handlebars-template">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            {{#each arr}}
+                                {{#if flag}}
+                                    {{#each value}}
+                                        <th>{{time}}</th>
+                                    {{/each}}
+                                {{/if}}
+                            {{/each}}
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title}}</td>
+                                <td>{{name}}</td>
+                                {{#each value}}
+                                    <td><input disabled="" type="text" value="{{area}}" /></td>
+                                {{/each}}
+                                <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+
+                            {{#each arr}}
+                             <tr>
+                                <td>{{title1}}</td>
+                                <td>{{name}}</td>
+                                {{#each value}}
+                                    <td><input disabled="" type="text" value="{{yield}}" /></td>
+                                {{/each}}
+                                <td class="sheet-modify">修改</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <div id="globe_apple_生产占比" class="section occupy">
+        <div class="sec-top">
+            <h3 class="pub-title">生产占比</h3>
+            <div class="else">
+                <div class="pop-time">
+                    <div class="time-des">时间：</div>
+                    <div class="time-txt">2013-2017</div>
+                    <ul class="time-list">
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>1995-1999</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2000-2004</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2005-2009</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2010-2014</span>
+                            </label>
+                        </li>
+                        <li class="time-item">
+                            <label>
+                                <input type="radio" name="global-apple-history-radio">
+                                <i class="radio iconfont"></i>
+                                <span>2015-2017</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pub-icon tab-nav">
+                    <button class="icon-btn active"><i class="iconfont icon-shanfeng"></i></button>
+                    <button class="icon-btn"><i class="iconfont icon-caidan"></i></button>
+                </div>
+
+                <ul class="pub-radio">
+                    <li class="active">种植面积</li>
+                    <li>产量</li>
+
+                </ul>
+                <button class="download"><i class="iconfont icon-xiazai"></i></button>
+            </div>
+				<div class="help mrl20">
+					<button><i class="iconfont icon-wenhao"></i></button>
+					<div class="help-ct weather-help">
+						<div class="diy-scroll">
+							<p>规模优势指数反映一个地区某种作物的规模化程度。</p>
+							<p class='help-title'>(1)计算公式</p>
+							<p><code> SAIij = ( GSij /GSi) /( GSj /GS)</code></p>
+							<p class='help-title'>(2)式中</p>
+							<p>SAIij 为规模优势指数; GSij 为 i 区 j 种农产品的播种面积; GSi 为 i 区所有农产品的播种面积之和; GSj 为全国 j 种农产品的播种面积; GS 为全国所有农产品的播种面积之和。 </p>
+							<p>SAIij ＜ 1，说明与全国平均水平相比， i 区 j 种作物在生产规模上处于劣势; SAIij ＞ 1，说明与全国平均水平相比，i 区 j 种作物在生产规模上处于优势; SAIij值越大， 说明作物的规模比较优势越明显。</p>
+							<p class='help-title'>(3)数据来源</p>
+							<p>农业部</p>
+						</div>
+					</div>
+				</div>
+        </div>
+        <div class="sec-ct tab-ct">
+            <div>
+                <div class="sec-part">
+                    <div id="occupy1" class="echart-box"></div>
+                    <div>
+                        <div class="echart-des">
+                            <span class="ecahrt-year">2011年</span><span>全球苹果园占果园</span><span class="newdanwei">面积</span><span>比重</span>
+                        </div>
+                        <div id="occupy2" class="echart-box"></div>
+                    </div>
+                </div>
+                <div class="desc-edit">
+                    <div class="top">
+                        <span class="desc-word">描述</span>
+                        <button class="fr edit-btn">
+                            <i class="iconfont icon-bianji"></i>
+                            <span>编辑</span>
+                        </button>
+                    </div>
+                    <div class="desc-ct">
+                        <textarea class="edit-ct scrollbar-inner" disabled="">2005-2014年，全球苹果产量年平均变化率4%，2014年产量8200万吨。中国苹果产量，年平均变化率3.5%，2014年产量4090万吨。美国苹果产量年平均变化率4%，2014年产量519万吨。</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="din">
+                <table class="sheet">
+
+                </table>
+
+
+                <script id="zhanbi" type="text/x-handlebars-template">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            {{#each arr}}
+                                {{#if flag}}
+                                    {{#each value}}
+                                        <th>{{time}}</th>
+                                    {{/each}}
+                                {{/if}}
+                            {{/each}}
+
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{#each arr}}
+                         <tr>
+                            <td>{{title}}</td>
+                            <td>{{name}}</td>
+
+                                {{#each value}}
+                                    <td><input disabled="" type="text" value="{{sumData}}" /></td>
+                                {{/each}}
+                                <td class="sheet-modify">修改</td>
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+
+
+
+                </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- 整体的背景图片样式 -->
+<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script src="../js/public.js"></script>
+<script src="../Lib/handlebars-v4.0.5.js"></script>
+<script src="../js/unite.js"></script>
+<script src="../js/chart-map-library.min.js"></script>
+<script src="../js/globe_apple.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<title>苹果大数据应用平台</title>
+		<link rel="stylesheet" href="../Lib/iconfont/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<script src="../Lib/jquery-1.12.4.min.js"></script>
+		<script src="../Lib/time-scrollbar.js"></script>
+		<script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+		<style>
+			.affectingFactors .sec-part {position:relative;}
+			.yNametitle{position:absolute;top:20px; left:50px;}
+			.warming .sec-part {position:relative;}
+			.visualMap{position:absolute;top:50px;left:100px;z-index: 9;}
+			.visualMap li{height:30px;line-height:30px;cursor: pointer;}
+			.visualMap .rain:before{display:inline-block;content:"";width:20px;height:20px;background:url(../images/2.png) no-repeat center;background-size: contain;position: relative;top:5px;margin: 0 5px;}
+			.visualMap .cold:before{display:inline-block;content:"";width:20px;height:20px;background:url(../images/0.png) no-repeat center;background-size: contain;position: relative;top:5px;margin: 0 5px;}
+			.visualMap .dry:before{display:inline-block;content:"";width:20px;height:20px;background:url(../images/1.png) no-repeat center;background-size: contain;position: relative;top:5px;margin: 0 5px;}
+			.active{color:#666;}
+			.map-title{position:absolute;left:40%;top:40px;color:#fff;font-size:24px;z-index:9;}
+		</style>
+	</head>
+	<body class="crop_weather">
+		<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+		<div class="wrapper">
+			<div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item production_status">
+            <h2><i class="iconfont icon-fenxi"></i><a href="apple_product.html">生产现状</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#production_status_空间分布">空间分布</a></li>
+                <li><a href="#production_status_历史演变">历史演变</a></li>
+                <!--<li><a href="#production_status_生产占比">生产占比</a></li>
+                <li><a href="#production_status_品种结构">品种结构</a></li>
+                <li><a href="#production_status_树龄结构">树龄结构</a></li>
+                <li><a href="#production_status_25年以上老龄苹果园分布">25年以上老龄苹果园分布</a></li>
+                <li><a href="#production_status_果农年龄结构">果农年龄结构</a></li>
+                <li><a href="#production_status_果农老龄化预测">果农老龄化预测</a></li>-->
+            </ul>
+        </dt>
+        <dt class="navbar-item produce_advantage" id="section-2">
+            <h2><i class="iconfont icon-chanqu"></i><a href="produce_advantage.html">产区优势</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#produce_advantage_规模优势">规模优势</a></li>
+                <li><a href="#produce_advantage_效率优势">效率优势</a></li>
+                <li><a href="#produce_advantage_效益优势">效益优势</a></li>
+                <!--<li><a href="#produce_advantage_产区优势历史演变">产区优势历史演变</a></li>-->
+            </ul>
+        </dt>
+        <dt class="navbar-item crop_weather" id="section-3">
+            <h2><i class="iconfont icon-qixiang"></i><a href="crop_weather.html">作物气象</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#crop_weather_影响因素">影响因素</a></li>
+                <li><a href="#crop_weather_灾害临界值">灾害临界值</a></li>
+                <li><a href="#crop_weather_灾害监测">灾害监测</a></li>
+                <li><a href="#crop_weather_单产预测">单产预测</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item globe_apple" id="section-4">
+            <h2><i class="iconfont icon-quanqiu"></i><a href="globe_apple.html">全球生产</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#globe_apple_空间分布">空间分布</a></li>
+                <li><a href="#globe_apple_历史演变">历史演变</a></li>
+                <li><a href="#globe_apple_生产占比">生产占比</a></li>
+            </ul>
+        </dt>
+    </dl>
+</div>
+
+			<div class="cont">
+
+				<div id="crop_weather_影响因素" class="section singleEffect">
+					<div class="sec-top">
+						<h3 class="pub-title">影响因素</h3>
+						<div class="else">
+							<div class="sel-areas"></div>
+							<div class="help mrl20">
+								<button><i class="iconfont icon-wenhao"></i></button>
+								<div class="help-ct weather-help">
+									<div class="diy-scroll">
+										<p class='help-title'>数据来源</p>
+										<p>农业部</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec-ct tab-ct">
+						<div>
+							<div class="sec-part">
+								<div id="weather-dc" class="echart-box"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="radius-border"></div>
+				<div id="crop_weather_灾害临界值" class="section affectingFactors">
+					<div class="sec-top">
+						<h3 class="pub-title">灾害临界值</h3>
+						<div class="else">
+							<!-- <span class='weather-title mrl50'>时期： </span> -->
+							<ul class="pub-radio  weather-factor">
+								<li class="active">低温冻害</li>
+								<li>干旱灾害</li>
+								<li>连阴雨灾害</li>
+							</ul>
+							<div class="help mrl20">
+								<button><i class="iconfont icon-wenhao"></i></button>
+								<div class="help-ct weather-help">
+									<div class="diy-scroll">
+										<p class='help-title'>数据来源</p>
+										<p>农业部</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="sec-part" style="margin-bottom:30px;">
+						<div class="yNametitle">
+							<span class="yName">该时期日均温度最低的前5%的平均值</span>
+						</div>
+						<div id="affectingFactors" class="echart-box" style="height:500px;"></div>
+					</div>
+				</div>
+				<div class="radius-border"></div>
+				<div id="crop_weather_灾害监测" class="section warming">
+					<div class="sec-top">
+						<h3 class="pub-title">灾害监测</h3>
+						<div class="pub-time">
+							<dl class="fixtime">
+								<div class="time-des">时间：</div>
+								<div class="time-txt">2017</div>
+							</dl>
+							<div class="another-time">
+								<ul class="time-list scrollbar-inner">
+									<li class="month-item">
+										<label>
+											<input type="checkbox" name=""/>
+											<i class="checkbox iconfont"></i>
+											<span>2017</span>
+										</label>
+									</li>
+									<li class="month-item">
+										<label>
+											<input type="checkbox" name=""/>
+											<i class="checkbox iconfont"></i>
+											<span>2016</span>
+										</label>
+									</li>
+									<li class="month-item">
+										<label>
+											<input type="checkbox" name=""/>
+											<i class="checkbox iconfont"></i>
+											<span>2015</span>
+										</label>
+									</li>
+									<li class="month-item">
+										<label>
+											<input type="checkbox" name=""/>
+											<i class="checkbox iconfont"></i>
+											<span>2014</span>
+										</label>
+									</li>
+									<li class="month-item">
+										<label>
+											<input type="checkbox" name=""/>
+											<i class="checkbox iconfont"></i>
+											<span>2013</span>
+										</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="else">
+							<span class='weather-title'>产区： </span>
+							<ul class="pub-radio show-area">
+								<li class="active">陕西</li>
+								<li>山东</li>
+							</ul>
+							<span class='weather-title mrl50'>时期： </span>
+							<ul class="pub-radio  weather-factor">
+								<li class="active">花期幼果期</li>
+								<li>果实膨大期</li>
+								<li>果实成熟期</li>
+							</ul>
+							<div class="help mrl20">
+								<button><i class="iconfont icon-wenhao"></i></button>
+								<div class="help-ct">
+									<div class="diy-scroll">
+										<p class='help-title'>数据来源</p>
+										<p>农业部</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="sec-part">
+						<div class="visualMap">
+							<ul>
+								<li class = 'cold'>低温冻害</li>
+								<li class = 'dry'>干旱灾害</li>
+								<li class = 'rain'>连阴雨灾害</li>
+							</ul>
+						</div>
+						<div class="map-title"><span class="select-area">陕西</span>省气象灾害监测</div>
+						<div id="crop-warming" class="echart-box"></div>
+					</div>
+				</div>
+				<div class="radius-border"></div>
+
+
+				<div id="crop_weather_单产预测" class="section effect">
+					<div class="sec-top">
+						<h3 class="pub-title">单产预测</h3>
+						<div class="else">
+							<div class="pub-time">
+								<dl class="fixtime">
+									<div class="time-des">时间：</div>
+									<div class="time-txt">2010-2017</div>
+								</dl>
+							</div>
+							<div class="sectop-two">
+								<div class="sel-areas">
+									<!--<span class="which-area" 产区： </span>-->
+									<div class="fake-ul">
+										<input data-areaid='hfeao' disabled="disabled" class="sel-area" id="dcAreaInput" type="text" value="山东"/>
+										<i class="iconfont icon-xiala"></i>
+										<ul id="dcAreaXl">
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="help">
+								<button><i class="iconfont icon-wenhao"></i></button>
+								<div class="help-ct important">
+									<div class="diy-scroll scrollbar-inner">
+										<p>选取气象要素（积温、降水、日照）历史和当年数据，以苹果生育期（萌芽期 - 花期，幼果期 - 果实膨大期，果实着色期 - 果实成熟期）三个阶段为研究对象，使用逐步回归法和岭回归方法建模，预测当年单产；图表通过折线图展示全国和各苹果产区实际单产和当年预测单产。数据来源于气象局。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec-part">
+						<div id="weather-effect" class="echart-box"></div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		
+
+		<!-- 整体的背景图片样式 -->
+		<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+		<script src="../Lib/Echarts/echarts.common.min.js"></script>
+		<script src="../Lib/Echarts/echarts-engine.js"></script>
+		<script src="../js/public.js"></script>
+		<!--<script src="../Lib/map.js"></script>-->
+		<script src="../Lib/disasterMap.min.js"></script>
+		<script src="../js/crop_weather.js"></script>
+	</body>
+</html>
+

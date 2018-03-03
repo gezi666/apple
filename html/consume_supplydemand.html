@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>苹果大数据应用平台</title>
+    <link rel="stylesheet" href="../Lib/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../Lib/scroll/jquery.scrollbar.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <script src="../Lib/jquery-1.12.4.min.js"></script>
+    <script src="../Lib/time-scrollbar.js"></script>
+    <script src="../Lib/scroll/jquery.scrollbar.min.js"></script>
+    <style>
+        .moreVariable .moreBariableBut{color:#82BCFF; display:inline-block;width: 20px; text-align: center;
+            height: 20px; text-align: center; border-radius: 50%; background: transparent; border: none;}
+    </style>
+</head>
+<body class="consume_supplydemand">
+<div class="head">
+    <h3 class="title">
+        <div class="logo icon-logo"></div>
+        <div class="line"></div>
+        <div class="name">苹果大数据应用平台</div>
+    </h3>
+    <div class="navigation">
+        <ul class="nav">
+            <li class="nav-item index"><a href="index.html">首页</a></li>
+            <li class="nav-item apple-product"><a href="apple_product.html">苹果生产</a></li>
+            <li class="nav-item apple-consume"><a href="consume_situation.html">苹果消费</a></li>
+            <li class="nav-item commerce"><a href="trade_situation.html">对外贸易</a></li>
+            <li class="nav-item market-price"><a href="price_monitor.html">市场价格</a></li>
+            <li class="nav-item cost-income"><a href="income_cost.html">成本收益</a></li>
+        </ul>
+        <div class="profile">
+            <button><i class="iconfont icon-yonghu"></i></button>
+            <button><i class="iconfont icon-shezhi"></i></button>
+            <button><i class="iconfont icon-tuichu"></i></button>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="nav-bar-bg">
+    <dl class="nav-bar">
+        <dt class="navbar-item consume_situation">
+            <h2><i class="iconfont icon-consume_situation"></i><a href="consume_situation.html">消费现状</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_situation_消费总量">消费总量</a></li>
+                <li><a href="#consume_situation_消费结构">消费结构</a></li>
+                <li><a href="#consume_situation_消费水平">消费水平</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item consume_supplydemand">
+            <h2><i class="iconfont icon-consume_supplydemand"></i><a href="consume_supplydemand.html">供求分析</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_supplydemand_供求现状">供求现状</a></li>
+                <li><a href="#consume_supplydemand_供求与价格">供求与价格</a></li>
+                <li><a href="#consume_supplydemand_供求预测">供求预测</a></li>
+                <li><a href="#consume_supplydemand_需求影响因素">需求影响因素</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item price_market">
+            <h2><i class="iconfont icon-liutong"></i><a href="price_market.html">市场流通</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#price_market_流向监测">流向监测</a></li>
+                <li><a href="#price_market_流向分析">流向分析</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item consume_channel">
+            <h2><i class="iconfont icon-consume_channel"></i><a href="consume_channel.html">消费渠道</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_channel_渠道分布">渠道分布</a></li>
+                <li><a href="#consume_channel_渠道销量">渠道销量</a></li>
+                <li><a href="#consume_channel_渠道特征">渠道特征</a></li>
+            </ul>
+        </dt>
+        <dt class="navbar-item consume_blueprint">
+            <h2><i class="iconfont icon-consume_blueprint"></i><a href="consume_blueprint.html">产品画像</a><i class="iconfont icon-arrowright"></i></h2>
+            <ul>
+                <li><a href="#consume_blueprint_产地偏好">产地偏好</a></li>
+                <li><a href="#consume_blueprint_特产品类热度">特产品类热度</a></li>
+                <li><a href="#consume_blueprint_档次偏好">档次偏好</a></li>
+                <li><a href="#consume_blueprint_交叉组合偏好">交叉组合偏好</a></li>
+                <li><a href="#consume_blueprint_产品品牌热度">产品品牌热度</a></li>
+            </ul>
+        </dt>
+
+    </dl>
+</div>
+
+    <div class="cont">
+        <div id="consume_supplydemand_供求现状" class="section actuality">
+            <div class="sec-top">
+                <h3 class="pub-title">供求现状</h3>
+            </div>
+            <div class="sec-top">
+                <span>产量和消费量</span>
+                <div class="else">
+                    <div class="pub-time">
+                        <dl class="fixtime">
+                            <div class="time-des">时间：</div>
+                            <div class="time-txt">2008-2012</div>
+                        </dl>
+                        <div class="another-time">
+                            <ul class="time-list scrollbar-inner">
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2015-2017</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2010-2014</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2005-2009</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2000-2004</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>1995-1999</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="yesorno-btn">
+                                <button class="time-yes" style="margin-right: 8px;">确认</button>
+                                <button class="time-no">清除</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help">
+                        <button><i class="iconfont icon-wenhao"></i></button>
+                        <div class="help-ct">
+                            <div class="diy-scroll">
+                                <p class='help-title'>（1）数据来源</p>
+                                <p>农业部</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-ct">
+                <div>
+                    <div class="sec-part">
+                        <div id="space-distributed">
+                            <div id="supplydemand" class="echart-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="consume_supplydemand_供需结余量" class="section balance-amount">
+            <div class="sec-top">
+                <span>供需结余量</span>
+                <div class="else">
+                    <div class="pub-time">
+                        <dl class="fixtime">
+                            <div class="time-des">时间：</div>
+                            <div class="time-txt">2008-2012</div>
+                        </dl>
+                        <div class="another-time">
+                            <ul class="time-list scrollbar-inner">
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2015-2017</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2010-2014</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2005-2009</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>2000-2004</span>
+                                    </label>
+                                </li>
+                                <li class="time-item">
+                                    <label>
+                                        <input type="checkbox" name="">
+                                        <i class="checkbox iconfont"></i>
+                                        <span>1995-1999</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="yesorno-btn">
+                                <button class="time-yes" style="margin-right: 8px;">确认</button>
+                                <button class="time-no">清除</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="help">
+                        <button><i class="iconfont icon-wenhao"></i></button>
+                        <div class="help-ct">
+                            <div class="diy-scroll">
+                                <p class='help-title'>（1）数据来源</p>
+                                <p>农业部</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-ct">
+                <div>
+                    <div class="sec-part">
+                        <div id="space-distributed">
+                            <div id="balanceAmount" class="echart-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="consume_supplydemand_供求与价格" class="section supply-price">
+            <div class="sec-top">
+                <h3 class="pub-title">供求与价格</h3>
+                <div class="sel-areas mrl20">
+                    <div class="fake-ul">
+                        <span class="sel-area">产量变化率</span>
+                        <i class="iconfont icon-xiala"></i>
+                        <ul>
+                            <li>产量变化率</li>
+                            <li>供需结余变化率</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="else mrl20">
+                    <ul class="pub-radio">
+                        <li class="active">价格波动</li>
+                        <li>价格趋势</li>
+                    </ul>
+                    <div class="help">
+                        <button><i class="iconfont icon-wenhao"></i></button>
+                        <div class="help-ct">
+                            <div class="diy-scroll">
+                                <p class='help-title'>（1）数据来源</p>
+                                <p>电商平台、农业部</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-ct">
+                <div>
+                    <div class="sec-part">
+                        <div id="space-distributed">
+                            <div id="supplyPrice" class="echart-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="consume_supplydemand_供求预测" class="section some-class">
+            <div class="sec-top">
+                <h3 class="pub-title">供求预测</h3>
+                <div class="else">
+                    <ul class="pub-radio">
+                        <li class="active">产量预测</li>
+                        <li>消费预测</li>
+                    </ul>
+                    <div class="help">
+                        <button><i class="iconfont icon-wenhao"></i></button>
+                        <div class="help-ct">
+                            <div class="diy-scroll">
+                                <p class='help-title'>（1）数据来源</p>
+                                <p>农业部</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-ct">
+                <div>
+                    <div class="sec-part">
+                        <div id="space-distributed">
+                            <div id="supplyForecast" class="echart-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="consume_supplydemand_需求影响因素" class="section moreVariable">
+            <div class="sec-top">
+                <h3 class="pub-title">需求影响因素</h3>
+                <div class="else">
+                    <button class="moreBariableBut"><i class="iconfont icon-guanbi" ></i></button>
+                    <div class="help">
+                        <button><i class="iconfont icon-wenhao"></i></button>
+                        <div class="help-ct">
+                            <div class="diy-scroll">
+                                <p class='help-title'>（1）数据来源</p>
+                                <p>农业部</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class = 'secondTitle'>多变量分析</span>
+            <div class="sec-ct">
+                <div>
+                    <div class="sec-part">
+                        <div>
+                            <div id="influencingFactor" class="echart-box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="consume_supplydemand_单变量分析" class="section singleVariable">
+            <div class="sec-top">
+                <span>单变量分析</span>
+                <div class="else">
+                    <ul class="pub-radio show-area">
+                        <li class="active">需求价格弹性</li>
+                        <li>需求收入弹性</li>
+                    </ul>
+                    <div class="help">
+                        <button><i class="iconfont icon-wenhao"></i></button>
+                        <div class="help-ct">
+                            <div class="diy-scroll">
+                                <p class='help-title'>（1）数据来源</p>
+                                <p>农业部</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-part">
+                <div id="singleVariable" class="echart-box"></div>
+            </div>
+        </div>-->
+    </div>
+
+
+</div>
+
+<!-- 图片背景 -->
+<div class="body-bg">
+    <img src="../images/bg_body.jpg">
+</div>
+
+<script src="../Lib/Echarts/echarts.common.min.js"></script>
+<script src="../Lib/Echarts/echarts-engine.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/chart-map-library.min.js"></script>
+<script src="../js/unite.js"></script>
+<script src="../js/consume_supplydemand.js"></script>
+</body>
+</html>
